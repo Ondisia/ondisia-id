@@ -15,10 +15,9 @@ const Index = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white px-5 pt-10 lg:px-16 text-center lg:text-left">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative container mx-auto px-4 py-20 md:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white pt-10 lg:px-16 text-center lg:text-left">
+        <div className="relative container py-20 md:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 mx-auto items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">

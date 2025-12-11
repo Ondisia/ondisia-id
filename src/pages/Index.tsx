@@ -15,9 +15,9 @@ const Index = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white pt-10 lg:px-16 text-center lg:text-left">
-        <div className="relative container py-20 md:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 mx-auto items-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white pt-10 px-1 lg:px-16 text-center lg:text-left">
+        <div className="relative py-20 md:py-32 w-full max-w-md mx-auto lg:max-w-none">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -33,7 +33,7 @@ const Index = () => {
                   Pesan Sekarang
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white text-blue-600 hover:bg-white hover:text-blue-800 text-lg px-8 py-6 rounded-xl font-semibold transition-all duration-300">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   Daftar Kursus
                 </Button>
               </div>

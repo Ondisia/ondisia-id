@@ -25,10 +25,7 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <motion.nav 
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+    <nav 
       className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md shadow-sm border-b border-border/50"
     >
       <div className="container mx-auto px-6">
@@ -103,7 +100,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

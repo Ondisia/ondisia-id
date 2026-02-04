@@ -23,17 +23,11 @@ const Index = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="space-y-8 will-change-transform"
+            <div 
+              className="space-y-8"
             >
               <div className="space-y-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1, duration: 0.3 }}
+                <div
                   className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-blue-200 text-sm font-medium"
                 >
                   <span className="relative flex h-2 w-2">
@@ -41,7 +35,7 @@ const Index = () => {
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                   </span>
                   {t("home.hero.feat1")}
-                </motion.div>
+                </div>
                 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-blue-200">
                   {t("home.hero.title")}
@@ -80,13 +74,10 @@ const Index = () => {
                   <span>{t("home.hero.feat3")}</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.99 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
-              className="relative will-change-transform"
+            <div 
+              className="relative"
             >
               {/* Floating Dashboard Card */}
               <div className="relative z-10 glass-card p-1 rounded-2xl bg-gradient-to-b from-white/10 to-transparent border border-white/10 shadow-2xl">
@@ -127,7 +118,7 @@ const Index = () => {
               {/* Modern Background Decorations */}
               <div className="absolute -top-10 -right-10 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px]"></div>
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-indigo-500/10 rounded-full blur-[80px]"></div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

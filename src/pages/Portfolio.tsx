@@ -19,9 +19,18 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import projectEcommerce from "@/assets/ecomerce.jpg";
+import projectCorporate from "@/assets/project-corporate.png";
+import projectMobileBanking from "@/assets/project-mobile-banking.jpg";
+import projectLms from "@/assets/project-lms.jpg";
+import projectFoodDelivery from "@/assets/project-food-delivery.jpg";
+import projectHealthcare from "@/assets/project-healthcare.jpg";
+import projectRealEstate from "@/assets/project-real-estate.jpg";
+import projectFitness from "@/assets/project-fitness.jpg";
+import projectSaas from "@/assets/project-saas.jpg";
+import projectTravel from "@/assets/project-travel.jpg";
+import projectSmartHome from "@/assets/project-smart-home.jpg";
+import projectLogistics from "@/assets/project-logistics.jpg";
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -40,50 +49,98 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Platform e-commerce lengkap dengan sistem payment gateway dan inventory management",
-      image: project1,
+      title: t("portfolio.project1.title"),
+      description: t("portfolio.project1.desc"),
+      image: projectEcommerce,
       tags: ["React", "Node.js", "MongoDB"],
       category: "Web Development",
     },
     {
       id: 2,
-      title: "Corporate Website",
-      description: "Website corporate profesional dengan CMS untuk management konten",
-      image: project2,
+      title: t("portfolio.project2.title"),
+      description: t("portfolio.project2.desc"),
+      image: projectCorporate,
       tags: ["WordPress", "PHP", "MySQL"],
       category: "Web Development",
     },
     {
       id: 3,
-      title: "Mobile Banking App",
-      description: "Aplikasi mobile banking dengan fitur transfer, pembayaran, dan investment",
-      image: project3,
+      title: t("portfolio.project3.title"),
+      description: t("portfolio.project3.desc"),
+      image: projectMobileBanking,
       tags: ["React Native", "Firebase", "API"],
       category: "Mobile App",
     },
     {
       id: 4,
-      title: "Learning Management System",
-      description: "Platform pembelajaran online dengan video streaming dan quiz interaktif",
-      image: project1,
+      title: t("portfolio.project4.title"),
+      description: t("portfolio.project4.desc"),
+      image: projectLms,
       tags: ["Vue.js", "Laravel", "PostgreSQL"],
       category: "Web Development",
     },
     {
       id: 5,
-      title: "Food Delivery App",
-      description: "Aplikasi delivery makanan dengan real-time tracking dan payment integration",
-      image: project2,
+      title: t("portfolio.project5.title"),
+      description: t("portfolio.project5.desc"),
+      image: projectFoodDelivery,
       tags: ["Flutter", "Firebase", "Google Maps"],
       category: "Mobile App",
     },
     {
       id: 6,
-      title: "Healthcare Portal",
-      description: "Portal kesehatan dengan fitur booking dokter dan telemedicine",
-      image: project3,
+      title: t("portfolio.project6.title"),
+      description: t("portfolio.project6.desc"),
+      image: projectHealthcare,
       tags: ["Next.js", "Express", "MongoDB"],
+      category: "Web Development",
+    },
+    {
+      id: 7,
+      title: t("portfolio.project7.title"),
+      description: t("portfolio.project7.desc"),
+      image: projectRealEstate,
+      tags: ["Next.js", "Tailwind", "Supabase"],
+      category: "Web Development",
+    },
+    {
+      id: 8,
+      title: t("portfolio.project8.title"),
+      description: t("portfolio.project8.desc"),
+      image: projectFitness,
+      tags: ["React Native", "HealthKit", "Firebase"],
+      category: "Mobile App",
+    },
+    {
+      id: 9,
+      title: t("portfolio.project9.title"),
+      description: t("portfolio.project9.desc"),
+      image: projectSaas,
+      tags: ["React", "D3.js", "Tailwind"],
+      category: "Web Development",
+    },
+    {
+      id: 10,
+      title: t("portfolio.project10.title"),
+      description: t("portfolio.project10.desc"),
+      image: projectTravel,
+      tags: ["Vue.js", "Python", "AWS"],
+      category: "Web Development",
+    },
+    {
+      id: 11,
+      title: t("portfolio.project11.title"),
+      description: t("portfolio.project11.desc"),
+      image: projectSmartHome,
+      tags: ["Flutter", "MQTT", "Node.js"],
+      category: "Mobile App",
+    },
+    {
+      id: 12,
+      title: t("portfolio.project12.title"),
+      description: t("portfolio.project12.desc"),
+      image: projectLogistics,
+      tags: ["React", "Go", "PostgreSQL"],
       category: "Web Development",
     },
   ];
@@ -109,7 +166,7 @@ const Portfolio = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-subtle">
+      <section className="pt-32 pb-20 px-6 bg-gradient-subtle">
         <div className="container mx-auto text-center">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -125,7 +182,7 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 px-4 bg-card/50">
+      <section className="py-8 px-6 bg-card/50">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -147,7 +204,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {loading ? (
@@ -241,7 +298,7 @@ const Portfolio = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-card">
+      <section className="py-20 px-6 bg-card">
         <div className="container mx-auto text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

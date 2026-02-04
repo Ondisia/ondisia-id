@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import teamImage from "@/assets/about-team.jpg";
+import teamImage from "@/assets/about-team.png";
 
 const About = () => {
   const { t } = useLanguage();
@@ -35,7 +35,7 @@ const About = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-subtle">
+      <section className="pt-32 pb-20 px-6 bg-gradient-subtle">
         <div className="container mx-auto text-center">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -51,14 +51,14 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn direction="left">
               <motion.img
                 src={teamImage}
                 alt="Tim Ondisia"
-                className="rounded-lg shadow-card w-full h-auto"
+                className="rounded-lg shadow-card max-w-md mx-auto h-auto"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               />
@@ -76,7 +76,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-4 bg-card">
+      <section className="py-20 px-6 bg-card">
         <div className="container mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
@@ -108,7 +108,7 @@ const About = () => {
       </section>
 
       {/* Team Stats */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6">
         <div className="container mx-auto">
           <FadeIn>
             <div className="text-center mb-12">

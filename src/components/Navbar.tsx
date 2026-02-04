@@ -26,11 +26,12 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-0 w-full z-50 bg-background/100 backdrop-blur-lg shadow-card"
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md shadow-sm border-b border-border/50"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Ondisia Logo" className="h-8 ml-2 lg:ml-5" />
@@ -54,7 +55,7 @@ const Navbar = () => {
             <LanguageToggle />
             <ThemeToggle />
             <Button variant="hero" size="sm" asChild>
-              <Link to="/contact">Konsultasi Gratis</Link>
+              <Link to="/contact">{t("nav.cta")}</Link>
             </Button>
           </div>
 
@@ -95,7 +96,7 @@ const Navbar = () => {
               <ThemeToggle />
               <Button variant="hero" size="sm" className="flex-1" asChild>
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Konsultasi Gratis
+                  {t("nav.cta")}
                 </Link>
               </Button>
             </div>

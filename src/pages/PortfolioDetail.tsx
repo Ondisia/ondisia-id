@@ -9,9 +9,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import projectEcommerce from "@/assets/ecomerce.jpg";
+import projectCorporate from "@/assets/project-corporate.png";
+import projectMobileBanking from "@/assets/project-mobile-banking.jpg";
+import projectLms from "@/assets/project-lms.jpg";
+import projectFoodDelivery from "@/assets/project-food-delivery.jpg";
+import projectHealthcare from "@/assets/project-healthcare.jpg";
+import projectRealEstate from "@/assets/project-real-estate.jpg";
+import projectFitness from "@/assets/project-fitness.jpg";
+import projectSaas from "@/assets/project-saas.jpg";
+import projectTravel from "@/assets/project-travel.jpg";
+import projectSmartHome from "@/assets/project-smart-home.jpg";
+import projectLogistics from "@/assets/project-logistics.jpg";
 
 const PortfolioDetail = () => {
   const { id } = useParams();
@@ -20,10 +29,10 @@ const PortfolioDetail = () => {
   const allProjects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Platform e-commerce lengkap dengan sistem payment gateway dan inventory management",
+      title: t("portfolio.project1.title"),
+      description: t("portfolio.project1.desc"),
       fullDescription: "Platform e-commerce modern yang dibangun dengan teknologi terkini. Sistem ini dilengkapi dengan payment gateway terintegrasi, inventory management real-time, dashboard analytics komprehensif, dan sistem notifikasi otomatis. Mendukung multiple payment methods dan multi-currency.",
-      image: project1,
+      image: projectEcommerce,
       tags: ["React", "Node.js", "MongoDB"],
       category: "Web Development",
       client: "PT Retail Indonesia",
@@ -42,17 +51,17 @@ const PortfolioDetail = () => {
     },
     {
       id: 2,
-      title: "Corporate Website",
-      description: "Website corporate profesional dengan CMS untuk management konten",
+      title: t("portfolio.project2.title"),
+      description: t("portfolio.project2.desc"),
       fullDescription: "Website corporate yang elegant dan profesional dengan CMS custom yang memudahkan tim untuk mengelola konten secara mandiri. Dilengkapi dengan blog system, gallery management, dan contact form terintegrasi.",
-      image: project2,
+      image: projectCorporate,
       tags: ["WordPress", "PHP", "MySQL"],
       category: "Web Development",
       client: "ABC Corporation",
       duration: "2 bulan",
       year: "2024",
       challenges: "Migrasi dari sistem lama tanpa downtime",
-      results: "Load time 3x lebih cepat dan user engagement meningkat 55%",
+      results: "Load time 3x lebih cepat and user engagement meningkat 55%",
       features: [
         "Custom CMS",
         "Blog management system",
@@ -64,10 +73,10 @@ const PortfolioDetail = () => {
     },
     {
       id: 3,
-      title: "Mobile Banking App",
-      description: "Aplikasi mobile banking dengan fitur transfer, pembayaran, dan investment",
+      title: t("portfolio.project3.title"),
+      description: t("portfolio.project3.desc"),
       fullDescription: "Aplikasi mobile banking yang aman dan user-friendly dengan berbagai fitur lengkap. Dilengkapi dengan enkripsi end-to-end, biometric authentication, dan real-time transaction monitoring.",
-      image: project3,
+      image: projectMobileBanking,
       tags: ["React Native", "Firebase", "API"],
       category: "Mobile App",
       client: "Bank Digital Nusantara",
@@ -86,10 +95,10 @@ const PortfolioDetail = () => {
     },
     {
       id: 4,
-      title: "Learning Management System",
-      description: "Platform pembelajaran online dengan video streaming dan quiz interaktif",
+      title: t("portfolio.project4.title"),
+      description: t("portfolio.project4.desc"),
       fullDescription: "LMS komprehensif untuk institusi pendidikan dengan fitur video streaming HD, quiz interaktif, assignment tracking, dan reporting system yang detail untuk monitoring progress siswa.",
-      image: project1,
+      image: projectLms,
       tags: ["Vue.js", "Laravel", "PostgreSQL"],
       category: "Web Development",
       client: "Universitas Teknologi Modern",
@@ -108,10 +117,10 @@ const PortfolioDetail = () => {
     },
     {
       id: 5,
-      title: "Food Delivery App",
-      description: "Aplikasi delivery makanan dengan real-time tracking dan payment integration",
+      title: t("portfolio.project5.title"),
+      description: t("portfolio.project5.desc"),
       fullDescription: "Aplikasi food delivery yang menghubungkan restaurant, driver, dan customer dalam satu platform terintegrasi. Dilengkapi dengan real-time GPS tracking, multiple payment options, dan rating system.",
-      image: project2,
+      image: projectFoodDelivery,
       tags: ["Flutter", "Firebase", "Google Maps"],
       category: "Mobile App",
       client: "FoodHub Indonesia",
@@ -130,10 +139,10 @@ const PortfolioDetail = () => {
     },
     {
       id: 6,
-      title: "Healthcare Portal",
-      description: "Portal kesehatan dengan fitur booking dokter dan telemedicine",
+      title: t("portfolio.project6.title"),
+      description: t("portfolio.project6.desc"),
       fullDescription: "Portal kesehatan digital yang memudahkan pasien untuk booking appointment, konsultasi online, dan akses medical records. Dilengkapi dengan video consultation dan prescription management.",
-      image: project3,
+      image: projectHealthcare,
       tags: ["Next.js", "Express", "MongoDB"],
       category: "Web Development",
       client: "HealthCare Plus",
@@ -150,6 +159,96 @@ const PortfolioDetail = () => {
         "Emergency contact system"
       ]
     },
+    {
+      id: 7,
+      title: t("portfolio.project7.title"),
+      description: t("portfolio.project7.desc"),
+      fullDescription: "Platform pencarian properti yang memudahkan pengguna mencari rumah atau apartemen impian. Dilengkapi dengan tur virtual 360, kalkulator KPR, dan chat langsung dengan agen.",
+      image: projectRealEstate,
+      tags: ["Next.js", "Tailwind", "Supabase"],
+      category: "Web Development",
+      client: "Estate Global",
+      duration: "3 bulan",
+      year: "2024",
+      challenges: "Implementasi tur virtual dan manajemen database properti yang besar",
+      results: "Digunakan oleh 50+ agen properti ternama",
+      features: ["360 Virtual Tour", "Mortgage Calculator", "Direct Agent Chat", "Advanced Filters"]
+    },
+    {
+      id: 8,
+      title: t("portfolio.project8.title"),
+      description: t("portfolio.project8.desc"),
+      fullDescription: "Aplikasi kebugaran yang membantu pengguna melacak aktivitas olahraga, asupan kalori, dan progres kesehatan secara real-time.",
+      image: projectFitness,
+      tags: ["React Native", "HealthKit", "Firebase"],
+      category: "Mobile App",
+      client: "FitLife Studio",
+      duration: "4 bulan",
+      year: "2024",
+      challenges: "Sinkronisasi data dengan wearable devices",
+      results: "Meningkatkan retensi member gym sebesar 30%",
+      features: ["Workout Tracking", "Calorie Counter", "Progress Charts", "Social Challenges"]
+    },
+    {
+      id: 9,
+      title: t("portfolio.project9.title"),
+      description: t("portfolio.project9.desc"),
+      fullDescription: "Dashboard analitik canggih untuk perusahaan skala menengah hingga besar untuk memantau performa bisnis di berbagai departemen.",
+      image: projectSaas,
+      tags: ["React", "D3.js", "Tailwind"],
+      category: "Web Development",
+      client: "Logix Analytics",
+      duration: "5 bulan",
+      year: "2024",
+      challenges: "Visualisasi data besar dengan performa tinggi",
+      results: "Penghematan waktu pelaporan hingga 80%",
+      features: ["Custom Dashboards", "Data Exporting", "Role-based Access", "Predictive Analytics"]
+    },
+    {
+      id: 10,
+      title: t("portfolio.project10.title"),
+      description: t("portfolio.project10.desc"),
+      fullDescription: "Sistem reservasi travel yang terintegrasi with berbagai provider penerbangan dan hotel di seluruh dunia.",
+      image: projectTravel,
+      tags: ["Vue.js", "Python", "AWS"],
+      category: "Web Development",
+      client: "TravelEase",
+      duration: "6 bulan",
+      year: "2023",
+      challenges: "Integrasi API dengan ribuan provider secara stabil",
+      results: "Memproses 1000+ booking setiap harinya",
+      features: ["Flight Search", "Hotel Booking", "Payment Installments", "Booking Management"]
+    },
+    {
+      id: 11,
+      title: t("portfolio.project11.title"),
+      description: t("portfolio.project11.desc"),
+      fullDescription: "Aplikasi untuk mengontrol seluruh perangkat pintar di rumah dari satu tempat dengan tingkat keamanan yang tinggi.",
+      image: projectSmartHome,
+      tags: ["Flutter", "MQTT", "Node.js"],
+      category: "Mobile App",
+      client: "SmartHome Tech",
+      duration: "5 bulan",
+      year: "2023",
+      challenges: "Latency rendah untuk kontrol real-time",
+      results: "Rating 4.9 di App Store dan Play Store",
+      features: ["Device Grouping", "Automated Scenes", "Energy Monitoring", "Security Alerts"]
+    },
+    {
+      id: 12,
+      title: t("portfolio.project12.title"),
+      description: t("portfolio.project12.desc"),
+      fullDescription: "Solusi end-to-end untuk perusahaan logistik dalam mengelola pengiriman, armada, dan inventaris secara efisien.",
+      image: projectLogistics,
+      tags: ["React", "Go", "PostgreSQL"],
+      category: "Web Development",
+      client: "FastLogistics ID",
+      duration: "7 bulan",
+      year: "2024",
+      challenges: "Optimasi rute dan tracking GPS multi-armada",
+      results: "Efisiensi pengiriman meningkat 25%",
+      features: ["Fleet Tracking", "Order Management", "Route Optimization", "Inventory Sync"]
+    },
   ];
 
   const project = allProjects.find((p) => p.id === parseInt(id || ""));
@@ -158,9 +257,9 @@ const PortfolioDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Project tidak ditemukan</h1>
+          <h1 className="text-4xl font-bold mb-4">{t("detail.notFound")}</h1>
           <Button asChild>
-            <Link to="/portfolio">Kembali ke Portfolio</Link>
+            <Link to="/portfolio">{t("detail.backToPortfolio")}</Link>
           </Button>
         </div>
       </div>
@@ -218,14 +317,14 @@ const PortfolioDetail = () => {
                 <div className="flex items-center gap-2">
                   <Users className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="text-sm text-muted-foreground">Client</p>
+                    <p className="text-sm text-muted-foreground">{t("detail.client")}</p>
                     <p className="font-semibold">{project.client}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="text-sm text-muted-foreground">Durasi</p>
+                    <p className="text-sm text-muted-foreground">{t("detail.duration")}</p>
                     <p className="font-semibold">{project.duration}</p>
                   </div>
                 </div>
@@ -374,13 +473,13 @@ const PortfolioDetail = () => {
         <div className="container mx-auto text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Tertarik dengan Project Serupa?
+              {t("detail.cta.title")}
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Mari diskusikan kebutuhan project Anda dengan tim kami
+              {t("detail.cta.subtitle")}
             </p>
             <Button size="lg" variant="hero" asChild>
-              <Link to="/contact">Konsultasi Gratis</Link>
+              <Link to="/contact">{t("nav.cta")}</Link>
             </Button>
           </FadeIn>
         </div>

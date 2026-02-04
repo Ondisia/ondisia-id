@@ -59,6 +59,8 @@ export default {
         'primary': 'var(--shadow-primary)',
         'card': 'var(--shadow-card)',
         'glow': 'var(--shadow-glow)',
+        'elegant': 'var(--shadow-elegant)',
+        'hover': 'var(--shadow-hover)',
       },
       borderRadius: {
         lg: "var(--radius)",

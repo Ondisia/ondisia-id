@@ -11,15 +11,21 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="relative"
+      className="relative overflow-hidden rounded-full w-10 h-10 hover:bg-primary/10 transition-colors"
     >
       <motion.div
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.2 }}
+        key={theme}
+        initial={{ y: 20, opacity: 0, rotate: -90 }}
+        animate={{ y: 0, opacity: 1, rotate: 0 }}
+        exit={{ y: -20, opacity: 0, rotate: 90 }}
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+        className="flex items-center justify-center"
       >
-        <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        {theme === "light" ? (
+          <Sun className="h-5 w-5 text-yellow-500" />
+        ) : (
+          <Moon className="h-5 w-5 text-blue-400" />
+        )}
       </motion.div>
       <span className="sr-only">Toggle theme</span>
     </Button>

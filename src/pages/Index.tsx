@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Zap, Users, BookOpen, GraduationCap, Code, ChevronRight, CheckCircle, Globe, Target, Star, Award, Clock } from "lucide-react";
+import { Zap, Users, BookOpen, GraduationCap, Code, ChevronRight, CheckCircle, Globe, Target, Star, Award, Clock, Smartphone } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { motion } from "framer-motion";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -15,243 +16,282 @@ const Index = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white pt-10 px-1 lg:px-16 text-center lg:text-left">
-        <div className="relative py-20 md:py-32 w-full max-w-md mx-auto lg:max-w-none">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                  Jasa Pembuatan Website & Kursus Coding
+      <section className="relative overflow-hidden bg-gradient-hero text-white pt-24 pb-16 md:pt-32 md:pb-32 text-center lg:text-left">
+        {/* Subtle Background Elements */}
+        <div className="absolute inset-0 bg-dot-pattern opacity-[0.05] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,100,255,0.05),transparent_70%)] pointer-events-none"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="space-y-8 will-change-transform"
+            >
+              <div className="space-y-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1, duration: 0.3 }}
+                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-blue-200 text-sm font-medium"
+                >
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                  </span>
+                  {t("home.hero.feat1")}
+                </motion.div>
+                
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-blue-200">
+                  {t("home.hero.title")}
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
-                  Solusi profesional untuk pembuatan website dan pembelajaran teknologi.
+                
+                <p className="text-lg md:text-xl text-blue-100/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  {t("home.hero.subtitle")}
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  Pesan Sekarang
-                  <ChevronRight className="ml-2 h-5 w-5" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" className="bg-white text-slate-900 hover:bg-blue-50 text-base px-8 py-6 rounded-full font-semibold shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:scale-105" asChild>
+                  <a 
+                    href={`https://wa.me/6282229062398?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi mengenai pembuatan website/aplikasi.")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("home.hero.cta1")}
+                    <ChevronRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  Daftar Kursus
+                <Button size="lg" variant="outline" className="border-white/20 bg-white/5 hover:bg-white/10 text-white backdrop-blur-sm text-base px-8 py-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105" asChild>
+                  <a href="/services">
+                    {t("home.hero.cta2")}
+                  </a>
                 </Button>
               </div>
               
-              <div className="flex items-center gap-6 text-blue-100">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5" />
-                  <span>100% Profesional</span>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-blue-100/60">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-blue-400" />
+                  <span>{t("home.hero.feat2")}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5" />
-                  <span>Harga Terjangkau</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5" />
-                  <span>Support 24/7</span>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="h-4 w-4 text-blue-400" />
+                  <span>{t("home.hero.feat3")}</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="relative">
-              <div className="relative z-10">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white/20 rounded-xl p-4 text-center">
-                      <Code className="h-12 w-12 mx-auto mb-2" />
-                      <p className="font-semibold">HTML/CSS</p>
-                    </div>
-                    <div className="bg-white/20 rounded-xl p-4 text-center">
-                      <Zap className="h-12 w-12 mx-auto mb-2" />
-                      <p className="font-semibold">JavaScript</p>
-                    </div>
-                    <div className="bg-white/20 rounded-xl p-4 text-center">
-                      <Globe className="h-12 w-12 mx-auto mb-2" />
-                      <p className="font-semibold">Responsive</p>
-                    </div>
-                    <div className="bg-white/20 rounded-xl p-4 text-center">
-                      <Users className="h-12 w-12 mx-auto mb-2" />
-                      <p className="font-semibold">Mentoring</p>
-                    </div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.99 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+              className="relative will-change-transform"
+            >
+              {/* Floating Dashboard Card */}
+              <div className="relative z-10 glass-card p-1 rounded-2xl bg-gradient-to-b from-white/10 to-transparent border border-white/10 shadow-2xl">
+                <div className="bg-slate-900/40 backdrop-blur-lg rounded-2xl p-6 md:p-10">
+                  <div className="grid grid-cols-2 gap-4 md:gap-6">
+                    <motion.div 
+                      whileHover={{ y: -5 }}
+                      className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition-colors"
+                    >
+                      <Code className="h-10 w-10 mx-auto mb-3 text-blue-400" />
+                      <p className="font-medium text-sm md:text-base">Modern Web</p>
+                    </motion.div>
+                    <motion.div 
+                      whileHover={{ y: -5 }}
+                      className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition-colors"
+                    >
+                      <Smartphone className="h-10 w-10 mx-auto mb-3 text-emerald-400" />
+                      <p className="font-medium text-sm md:text-base">Mobile App</p>
+                    </motion.div>
+                    <motion.div 
+                      whileHover={{ y: -5 }}
+                      className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition-colors"
+                    >
+                      <Globe className="h-10 w-10 mx-auto mb-3 text-purple-400" />
+                      <p className="font-medium text-sm md:text-base">Scaleable</p>
+                    </motion.div>
+                    <motion.div 
+                      whileHover={{ y: -5 }}
+                      className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition-colors"
+                    >
+                      <Users className="h-10 w-10 mx-auto mb-3 text-amber-400" />
+                      <p className="font-medium text-sm md:text-base">{t("services.process.step1")}</p>
+                    </motion.div>
                   </div>
                 </div>
               </div>
               
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-pink-400 rounded-full opacity-20 blur-xl"></div>
-            </div>
+              {/* Modern Background Decorations */}
+              <div className="absolute -top-10 -right-10 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px]"></div>
+              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-indigo-500/10 rounded-full blur-[80px]"></div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Tentang Ondisia */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Tentang Ondisia
-            </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Ondisia adalah penyedia jasa digital terpercaya yang berfokus pada pembuatan website profesional, 
-              optimasi website, jasa pengerjaan tugas, serta kursus pembuatan website dari dasar hingga mahir.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                  <Code className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">Pembuatan Website</h3>
-                <p className="text-gray-600 text-sm">Website profesional dan modern</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                  <Zap className="h-8 w-8 text-green-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">Optimasi Website</h3>
-                <p className="text-gray-600 text-sm">Meningkatkan performa website</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                  <BookOpen className="h-8 w-8 text-purple-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">Jasa Pengerjaan Tugas</h3>
-                <p className="text-gray-600 text-sm">Bantu mengerjakan tugas website</p>
-              </div>
-              <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                  <GraduationCap className="h-8 w-8 text-orange-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">Kursus Website</h3>
-                <p className="text-gray-600 text-sm">Belajar dari dasar hingga mahir</p>
-              </div>
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <motion.h2 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground"
+            >
+              {t("home.about.title")}
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.4 }}
+              className="text-xl text-muted-foreground leading-relaxed italic"
+            >
+              "{t("home.about.desc")}"
+            </motion.p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+              {[
+                { icon: Code, color: "blue", label: t("home.about.item1"), desc: t("home.about.item1Desc") },
+                { icon: Zap, color: "emerald", label: t("home.about.item2"), desc: t("home.about.item2Desc") },
+                { icon: BookOpen, color: "purple", label: t("home.about.item3"), desc: t("home.about.item3Desc") },
+                { icon: GraduationCap, color: "amber", label: t("home.about.item4"), desc: t("home.about.item4Desc") },
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.05 * idx, duration: 0.3 }}
+                  className="group p-8 rounded-3xl bg-card border border-border/50 hover:border-primary/20 hover:shadow-elegant transition-all will-change-transform"
+                >
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform ${
+                    item.color === "blue" ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" :
+                    item.color === "emerald" ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400" :
+                    item.color === "purple" ? "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400" :
+                    "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400"
+                  }`}>
+                    <item.icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-3">{item.label}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Layanan */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Layanan Kami
+      <section id="services" className="py-24 bg-muted/20 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center space-y-4 mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              {t("home.services.title")}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Solusi lengkap untuk kebutuhan website dan pembelajaran coding Anda
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t("home.services.subtitle")}
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+            <Card className="hover:shadow-elegant transition-all duration-300 border-0 bg-background/50 backdrop-blur-sm group p-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="h-10 w-10 text-blue-600" />
+                <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="h-10 w-10 text-blue-600 dark:text-blue-400" />
                 </div>
-                <CardTitle className="text-xl">Pengerjaan Tugas Website</CardTitle>
+                <CardTitle className="text-xl font-bold">{t("home.services.task.title")}</CardTitle>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-gray-600">
-                  Bantu mengerjakan tugas website untuk sekolah dan kuliah dengan hasil yang memuaskan.
+              <CardContent className="text-center space-y-6">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("home.services.task.desc")}
                 </CardDescription>
-                <ul className="text-left space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Tepat waktu</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Kualitas terbaik</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Documen lengkap</span>
-                  </li>
+                <ul className="text-left space-y-3">
+                  {[1, 2, 3].map((i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <div className="h-5 w-5 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-3 w-3 text-emerald-500" />
+                      </div>
+                      <span>{t(`home.services.task.feat${i}`)}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+            <Card className="hover:shadow-elegant transition-all duration-300 border-0 bg-background/50 backdrop-blur-sm group p-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="h-10 w-10 text-green-600" />
+                <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-900/40 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="h-10 w-10 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <CardTitle className="text-xl">Optimasi Website</CardTitle>
+                <CardTitle className="text-xl font-bold">{t("home.services.opt.title")}</CardTitle>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-gray-600">
-                  Meningkatkan performa website Anda untuk loading yang lebih cepat dan SEO friendly.
+              <CardContent className="text-center space-y-6">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("home.services.opt.desc")}
                 </CardDescription>
-                <ul className="text-left space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Optimasi kecepatan</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>SEO optimization</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Mobile friendly</span>
-                  </li>
+                <ul className="text-left space-y-3">
+                  {[1, 2, 3].map((i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <div className="h-5 w-5 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-3 w-3 text-emerald-500" />
+                      </div>
+                      <span>{t(`home.services.opt.feat${i}`)}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+            <Card className="hover:shadow-elegant transition-all duration-300 border-0 bg-background/50 backdrop-blur-sm group p-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Code className="h-10 w-10 text-purple-600" />
+                <div className="w-20 h-20 bg-purple-100 dark:bg-purple-900/40 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Code className="h-10 w-10 text-purple-600 dark:text-purple-400" />
                 </div>
-                <CardTitle className="text-xl">Pembuatan Website dari Nol</CardTitle>
+                <CardTitle className="text-xl font-bold">{t("home.services.dev.title")}</CardTitle>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-gray-600">
-                  Jasa pembuatan website profesional sesuai kebutuhan bisnis atau personal Anda.
+              <CardContent className="text-center space-y-6">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("home.services.dev.desc")}
                 </CardDescription>
-                <ul className="text-left space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Desain modern</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Responsive design</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Maintenance support</span>
-                  </li>
+                <ul className="text-left space-y-3">
+                  {[1, 2, 3].map((i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <div className="h-5 w-5 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-3 w-3 text-emerald-500" />
+                      </div>
+                      <span>{t(`home.services.dev.feat${i}`)}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+            <Card className="hover:shadow-elegant transition-all duration-300 border-0 bg-background/50 backdrop-blur-sm group p-2">
               <CardHeader className="text-center pb-4">
-                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="h-10 w-10 text-orange-600" />
+                <div className="w-20 h-20 bg-amber-100 dark:bg-amber-900/40 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <GraduationCap className="h-10 w-10 text-amber-600 dark:text-amber-400" />
                 </div>
-                <CardTitle className="text-xl">Kursus Website</CardTitle>
+                <CardTitle className="text-xl font-bold">{t("home.services.course.title")}</CardTitle>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <CardDescription className="text-gray-600">
-                  Belajar membuat website dari dasar dengan HTML, CSS, dan JavaScript.
+              <CardContent className="text-center space-y-6">
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {t("home.services.course.desc")}
                 </CardDescription>
-                <ul className="text-left space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Materi lengkap</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Praktik langsung</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span>Sertifikat</span>
-                  </li>
+                <ul className="text-left space-y-3">
+                  {[1, 2, 3].map((i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <div className="h-5 w-5 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-3 w-3 text-emerald-500" />
+                      </div>
+                      <span>{t(`home.services.course.feat${i}`)}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
@@ -260,77 +300,50 @@ const Index = () => {
       </section>
 
       {/* Mengapa Memilih Kami */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Mengapa Memilih Kami
+      <section className="py-24 bg-background overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="text-center space-y-4 mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              {t("home.why.title")}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Keunggulan yang membuat Ondisia menjadi pilihan terbaik untuk kebutuhan website Anda
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t("home.why.subtitle")}
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Zap className="h-6 w-6 text-blue-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cepat, Rapi, dan Profesional</h3>
-                <p className="text-gray-600">Pengerjaan tepat waktu dengan hasil yang rapi dan profesional sesuai standar industri.</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Target className="h-6 w-6 text-green-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cocok untuk Tugas Sekolah/Kuliah</h3>
-                <p className="text-gray-600">Pengalaman membantu berbagai tugas website dari tingkat sekolah hingga perguruan tinggi.</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Users className="h-6 w-6 text-purple-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Konsultasi Gratis</h3>
-                <p className="text-gray-600">Konsultasi gratis untuk membantu menentukan solusi terbaik untuk kebutuhan Anda.</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Star className="h-6 w-6 text-orange-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Transparansi Harga</h3>
-                <p className="text-gray-600">Harga yang kompetitif dan transparan tanpa biaya tersembunyi.</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Award className="h-6 w-6 text-red-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Kursus Ramah Pemula</h3>
-                <p className="text-gray-600">Materi kursus dirancang khusus untuk pemula dengan pendekatan yang mudah dipahami.</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Clock className="h-6 w-6 text-indigo-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Waktu Fleksibel</h3>
-                <p className="text-gray-600">Jadwal yang fleksibel untuk kursus dan pengerjaan proyek sesuai waktu Anda.</p>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            {[
+              { icon: Zap, color: "blue", label: t("home.why.item1.title"), desc: t("home.why.item1.desc") },
+              { icon: Target, color: "emerald", label: t("home.why.item2.title"), desc: t("home.why.item2.desc") },
+              { icon: Users, color: "purple", label: t("home.why.item3.title"), desc: t("home.why.item3.desc") },
+              { icon: Star, color: "amber", label: t("home.why.item4.title"), desc: t("home.why.item4.desc") },
+              { icon: Award, color: "red", label: t("home.why.item5.title"), desc: t("home.why.item5.desc") },
+              { icon: Clock, color: "indigo", label: t("home.why.item6.title"), desc: t("home.why.item6.desc") },
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, scale: 0.98 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.03, duration: 0.3 }}
+                className="flex gap-6 items-start will-change-transform"
+              >
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 ${
+                    item.color === "blue" ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" :
+                    item.color === "emerald" ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400" :
+                    item.color === "purple" ? "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400" :
+                    item.color === "amber" ? "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400" :
+                    item.color === "red" ? "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400" :
+                    "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400"
+                }`}>
+                  <item.icon className="h-7 w-7" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{item.label}</h3>
+                  <p className="text-muted-foreground leading-relaxed italic text-sm">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

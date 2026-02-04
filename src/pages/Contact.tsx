@@ -60,7 +60,7 @@ const Contact = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-subtle">
+      <section className="pt-32 pb-20 px-6 bg-gradient-subtle">
         <div className="container mx-auto text-center">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -76,7 +76,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
@@ -246,7 +246,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 px-4 bg-muted">
+      <section className="py-20 px-6 bg-muted">
         <div className="container mx-auto">
           <FadeIn>
             <Card className="border-border shadow-card overflow-hidden">

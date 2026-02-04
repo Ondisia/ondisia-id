@@ -27,10 +27,10 @@ const Services = () => {
       title: t("services.web.title"),
       description: t("services.web.desc"),
       features: [
-        "Website Company Profile",
-        "E-Commerce Platform",
-        "Web Application",
-        "Landing Page",
+        t("services.web.feat1"),
+        t("services.web.feat2"),
+        t("services.web.feat3"),
+        t("services.web.feat4"),
       ],
     },
     {
@@ -38,10 +38,10 @@ const Services = () => {
       title: t("services.mobile.title"),
       description: t("services.mobile.desc"),
       features: [
-        "Android App Development",
-        "iOS App Development",
-        "React Native",
-        "Flutter Development",
+        t("services.mobile.feat1"),
+        t("services.mobile.feat2"),
+        t("services.mobile.feat3"),
+        t("services.mobile.feat4"),
       ],
     },
     {
@@ -49,10 +49,10 @@ const Services = () => {
       title: t("services.design.title"),
       description: t("services.design.desc"),
       features: [
-        "User Interface Design",
-        "User Experience Design",
-        "Prototyping",
-        "Brand Identity",
+        t("services.design.feat1"),
+        t("services.design.feat2"),
+        t("services.design.feat3"),
+        t("services.design.feat4"),
       ],
     },
     {
@@ -60,10 +60,10 @@ const Services = () => {
       title: t("services.backend.title"),
       description: t("services.backend.desc"),
       features: [
-        "API Development",
-        "Database Design",
-        "Server Configuration",
-        "Integration Services",
+        t("services.backend.feat1"),
+        t("services.backend.feat2"),
+        t("services.backend.feat3"),
+        t("services.backend.feat4"),
       ],
     },
     {
@@ -71,10 +71,10 @@ const Services = () => {
       title: t("services.cloud.title"),
       description: t("services.cloud.desc"),
       features: [
-        "AWS Services",
-        "Google Cloud",
-        "Azure Platform",
-        "DevOps Setup",
+        t("services.cloud.feat1"),
+        t("services.cloud.feat2"),
+        t("services.cloud.feat3"),
+        t("services.cloud.feat4"),
       ],
     },
     {
@@ -82,10 +82,10 @@ const Services = () => {
       title: t("services.maintenance.title"),
       description: t("services.maintenance.desc"),
       features: [
-        "Bug Fixes",
-        "Performance Optimization",
-        "Security Updates",
-        "Technical Support",
+        t("services.maintenance.feat1"),
+        t("services.maintenance.feat2"),
+        t("services.maintenance.feat3"),
+        t("services.maintenance.feat4"),
       ],
     },
     {
@@ -93,10 +93,10 @@ const Services = () => {
       title: t("services.seo.title"),
       description: t("services.seo.desc"),
       features: [
-        "On-Page SEO",
-        "Technical SEO",
-        "Content Strategy",
-        "Analytics Setup",
+        t("services.seo.feat1"),
+        t("services.seo.feat2"),
+        t("services.seo.feat3"),
+        t("services.seo.feat4"),
       ],
     },
     {
@@ -104,10 +104,10 @@ const Services = () => {
       title: t("services.consulting.title"),
       description: t("services.consulting.desc"),
       features: [
-        "Technology Audit",
-        "Solution Architecture",
-        "Project Planning",
-        "Best Practices",
+        t("services.consulting.feat1"),
+        t("services.consulting.feat2"),
+        t("services.consulting.feat3"),
+        t("services.consulting.feat4"),
       ],
     },
   ];
@@ -118,7 +118,7 @@ const Services = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-subtle">
+      <section className="pt-32 pb-20 px-6 bg-gradient-subtle">
         <div className="container mx-auto text-center">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -134,7 +134,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
@@ -168,7 +168,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 bg-card">
+      <section className="py-20 px-6 bg-card">
         <div className="container mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
@@ -202,7 +202,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-primary">
+      <section className="py-20 px-6 bg-gradient-primary">
         <div className="container mx-auto text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

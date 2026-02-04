@@ -11,6 +11,7 @@ import PortfolioDetail from "./pages/PortfolioDetail";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <SpeedInsights />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />

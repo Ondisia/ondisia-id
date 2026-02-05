@@ -8,7 +8,7 @@ const Preloader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 900); // Snappy loading time
+    }, 1500); // Snappy loading time
 
     return () => clearTimeout(timer);
   }, []);

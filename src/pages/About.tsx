@@ -29,6 +29,8 @@ const About = () => {
     },
   ];
 
+  
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -51,14 +53,14 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 overflow-hidden">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <FadeIn direction="left">
+            <FadeIn direction="left" className="w-full flex justify-center">
               <motion.img
                 src={teamImage}
                 alt="Tim Ondisia"
-                className="rounded-lg shadow-card max-w-md mx-auto h-auto"
+                className="rounded-lg shadow-card w-full max-w-md h-auto object-cover"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               />

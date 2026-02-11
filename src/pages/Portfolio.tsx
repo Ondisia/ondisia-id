@@ -19,18 +19,18 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import projectEcommerce from "@/assets/ecomerce.jpg";
-import projectCorporate from "@/assets/project-corporate.png";
-import projectMobileBanking from "@/assets/project-mobile-banking.jpg";
-import projectLms from "@/assets/project-lms.jpg";
-import projectFoodDelivery from "@/assets/project-food-delivery.jpg";
-import projectHealthcare from "@/assets/project-healthcare.jpg";
-import projectRealEstate from "@/assets/project-real-estate.jpg";
-import projectFitness from "@/assets/project-fitness.jpg";
-import projectSaas from "@/assets/project-saas.jpg";
-import projectTravel from "@/assets/project-travel.jpg";
-import projectSmartHome from "@/assets/project-smart-home.jpg";
-import projectLogistics from "@/assets/project-logistics.jpg";
+import projectEcommerce from "@/assets/startflow.png";
+import projectCorporate from "@/assets/umkm.png";
+import projectMobileBanking from "@/assets/nusantara.png";
+import projectLms from "@/assets/edu.png";
+import projectFoodDelivery from "@/assets/company.png";
+import projectHealthcare from "@/assets/book.png";
+import projectRealEstate from "@/assets/event.png";
+import projectFitness from "@/assets/biztrack.png";
+import projectSaas from "@/assets/eta.png";
+import projectTravel from "@/assets/warga.png";
+import projectSmartHome from "@/assets/kursus.png";
+import projectLogistics from "@/assets/kapa.png";
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -52,96 +52,108 @@ const Portfolio = () => {
       title: t("portfolio.project1.title"),
       description: t("portfolio.project1.desc"),
       image: projectEcommerce,
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["React", "Tailwind", "Vite"],
       category: "Web Development",
+      demoUrl: "https://start-flow-scale-your-startup-faste.vercel.app/",
     },
     {
       id: 2,
       title: t("portfolio.project2.title"),
       description: t("portfolio.project2.desc"),
       image: projectCorporate,
-      tags: ["WordPress", "PHP", "MySQL"],
+      tags: ["React", "Firebase", "Tailwind"],
       category: "Web Development",
+      demoUrl: "https://umk-mmart-global-standard-msme-mark.vercel.app/",
     },
     {
       id: 3,
       title: t("portfolio.project3.title"),
       description: t("portfolio.project3.desc"),
       image: projectMobileBanking,
-      tags: ["React Native", "Firebase", "API"],
-      category: "Mobile App",
+      tags: ["React", "Lucide", "Vite"],
+      category: "Web Development",
+      demoUrl: "https://visit-nusantara-sooty.vercel.app/",
     },
     {
       id: 4,
       title: t("portfolio.project4.title"),
       description: t("portfolio.project4.desc"),
       image: projectLms,
-      tags: ["Vue.js", "Laravel", "PostgreSQL"],
+      tags: ["React", "Tailwind", "Vite"],
       category: "Web Development",
+      demoUrl: "https://eduform.vercel.app/",
     },
     {
       id: 5,
       title: t("portfolio.project5.title"),
       description: t("portfolio.project5.desc"),
       image: projectFoodDelivery,
-      tags: ["Flutter", "Firebase", "Google Maps"],
-      category: "Mobile App",
+      tags: ["React", "Tailwind", "Framer Motion"],
+      category: "Web Development",
+      demoUrl: "https://startflow-psi.vercel.app/",
     },
     {
       id: 6,
       title: t("portfolio.project6.title"),
       description: t("portfolio.project6.desc"),
       image: projectHealthcare,
-      tags: ["Next.js", "Express", "MongoDB"],
+      tags: ["React", "Shadcn UI", "Tailwind"],
       category: "Web Development",
+      demoUrl: "https://bookease-jade.vercel.app/",
     },
     {
       id: 7,
       title: t("portfolio.project7.title"),
       description: t("portfolio.project7.desc"),
       image: projectRealEstate,
-      tags: ["Next.js", "Tailwind", "Supabase"],
-      category: "Web Development",
+      tags: ["React Native", "Expo", "Firebase"],
+      category: "Mobile App",
+      demoUrl: "https://event-info-blond.vercel.app/",
     },
     {
       id: 8,
       title: t("portfolio.project8.title"),
       description: t("portfolio.project8.desc"),
       image: projectFitness,
-      tags: ["React Native", "HealthKit", "Firebase"],
+      tags: ["React Native", "Redux", "API"],
       category: "Mobile App",
+      demoUrl: "https://biztrack-phi.vercel.app/",
     },
     {
       id: 9,
       title: t("portfolio.project9.title"),
       description: t("portfolio.project9.desc"),
       image: projectSaas,
-      tags: ["React", "D3.js", "Tailwind"],
-      category: "Web Development",
+      tags: ["React Native", "NativeWind", "Supabase"],
+      category: "Mobile App",
+      demoUrl: "https://umkm-eta.vercel.app/",
     },
     {
       id: 10,
       title: t("portfolio.project10.title"),
       description: t("portfolio.project10.desc"),
       image: projectTravel,
-      tags: ["Vue.js", "Python", "AWS"],
-      category: "Web Development",
+      tags: ["React Native", "Expo", "Maps"],
+      category: "Mobile App",
+      demoUrl: "https://lapor-warga-nine.vercel.app/",
     },
     {
       id: 11,
       title: t("portfolio.project11.title"),
       description: t("portfolio.project11.desc"),
       image: projectSmartHome,
-      tags: ["Flutter", "MQTT", "Node.js"],
+      tags: ["React Native", "Context API", "Vite"],
       category: "Mobile App",
+      demoUrl: "https://course-lesson.vercel.app/",
     },
     {
       id: 12,
       title: t("portfolio.project12.title"),
       description: t("portfolio.project12.desc"),
       image: projectLogistics,
-      tags: ["React", "Go", "PostgreSQL"],
-      category: "Web Development",
+      tags: ["React Native", "Expo", "Shadcn"],
+      category: "Mobile App",
+      demoUrl: "https://smartbooking-kappa.vercel.app/",
     },
   ];
 
@@ -219,12 +231,12 @@ const Portfolio = () => {
                       className="h-full"
                     >
                       <Card className="group overflow-hidden hover:shadow-hover transition-all duration-500 cursor-pointer flex flex-col h-full">
-                        <div className="relative overflow-hidden h-56 flex-shrink-0">
+                        <div className="relative overflow-hidden h-56 flex-shrink-0 bg-white">
                           <motion.img
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-full object-cover"
-                            whileHover={{ scale: 1.1 }}
+                            className={`w-full h-full ${project.category === "Web Development" ? "object-cover" : "object-contain object-bottom"}`}
+                            whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.5 }}
                           />
                           <motion.div 
@@ -236,7 +248,7 @@ const Portfolio = () => {
                             <ExternalLink className="h-12 w-12 text-white" />
                           </motion.div>
                         </div>
-                        <CardContent className="pt-6 flex-grow flex flex-col">
+                        <CardContent className="flex-grow flex flex-col">
                           <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/20 w-fit">
                             {project.category}
                           </Badge>

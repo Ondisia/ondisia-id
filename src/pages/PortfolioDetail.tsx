@@ -9,18 +9,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import projectEcommerce from "@/assets/ecomerce.jpg";
-import projectCorporate from "@/assets/project-corporate.png";
-import projectMobileBanking from "@/assets/project-mobile-banking.jpg";
-import projectLms from "@/assets/project-lms.jpg";
-import projectFoodDelivery from "@/assets/project-food-delivery.jpg";
-import projectHealthcare from "@/assets/project-healthcare.jpg";
-import projectRealEstate from "@/assets/project-real-estate.jpg";
-import projectFitness from "@/assets/project-fitness.jpg";
-import projectSaas from "@/assets/project-saas.jpg";
-import projectTravel from "@/assets/project-travel.jpg";
-import projectSmartHome from "@/assets/project-smart-home.jpg";
-import projectLogistics from "@/assets/project-logistics.jpg";
+import projectEcommerce from "@/assets/startflow.png";
+import projectCorporate from "@/assets/umkm.png";
+import projectMobileBanking from "@/assets/nusantara.png";
+import projectLms from "@/assets/edu.png";
+import projectFoodDelivery from "@/assets/company.png";
+import projectHealthcare from "@/assets/book.png";
+import projectRealEstate from "@/assets/event.png";
+import projectFitness from "@/assets/biztrack.png";
+import projectSaas from "@/assets/eta.png";
+import projectTravel from "@/assets/warga.png";
+import projectSmartHome from "@/assets/kursus.png";
+import projectLogistics from "@/assets/kapa.png";
 
 const PortfolioDetail = () => {
   const { id } = useParams();
@@ -31,223 +31,235 @@ const PortfolioDetail = () => {
       id: 1,
       title: t("portfolio.project1.title"),
       description: t("portfolio.project1.desc"),
-      fullDescription: "Platform e-commerce modern yang dibangun dengan teknologi terkini. Sistem ini dilengkapi dengan payment gateway terintegrasi, inventory management real-time, dashboard analytics komprehensif, dan sistem notifikasi otomatis. Mendukung multiple payment methods dan multi-currency.",
+      fullDescription: "StartFlow adalah platform akselerator startup yang dirancang untuk membantu pengusaha baru mengelola dan mengembangkan bisnis mereka dengan lebih efisien. Platform ini menyediakan alat kolaborasi, pelacakan KPI, dan manajemen tugas yang disesuaikan untuk kebutuhan startup tahap awal.",
       image: projectEcommerce,
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["React", "Tailwind", "Vite"],
       category: "Web Development",
-      client: "PT Retail Indonesia",
+      client: "StartFlow Global",
       duration: "3 bulan",
       year: "2024",
-      challenges: "Integrasi multiple payment gateway dan sinkronisasi inventory real-time",
-      results: "Peningkatan konversi penjualan 40% dan efisiensi operasional 60%",
+      challenges: "Membangun antarmuka yang intuitif untuk manajemen data yang kompleks.",
+      results: "Membantu 50+ startup meningkatkan efisiensi operasional sebesar 40%.",
       features: [
-        "Multi-vendor marketplace",
-        "Real-time inventory tracking",
-        "Payment gateway integration",
-        "Advanced analytics dashboard",
-        "Mobile responsive design",
-        "SEO optimized"
-      ]
+        "Dashboard Analytics",
+        "Task Management",
+        "KPI Tracking",
+        "Investor CRM",
+        "Resource Library",
+        "Community Hub"
+      ],
+      demoUrl: "https://start-flow-scale-your-startup-faste.vercel.app/"
     },
     {
       id: 2,
       title: t("portfolio.project2.title"),
       description: t("portfolio.project2.desc"),
-      fullDescription: "Website corporate yang elegant dan profesional dengan CMS custom yang memudahkan tim untuk mengelola konten secara mandiri. Dilengkapi dengan blog system, gallery management, dan contact form terintegrasi.",
+      fullDescription: "UMK-M Mart adalah marketplace inovatif yang menghubungkan pelaku UMKM dengan pasar yang lebih luas. Platform ini tidak hanya berfungsi sebagai tempat berjualan, tetapi juga sebagai pusat pendampingan digital bagi para pelaku usaha mikro.",
       image: projectCorporate,
-      tags: ["WordPress", "PHP", "MySQL"],
+      tags: ["React", "Firebase", "Tailwind"],
       category: "Web Development",
-      client: "ABC Corporation",
-      duration: "2 bulan",
+      client: "Aliansi UMKM Indonesia",
+      duration: "4 bulan",
       year: "2024",
-      challenges: "Migrasi dari sistem lama tanpa downtime",
-      results: "Load time 3x lebih cepat and user engagement meningkat 55%",
+      challenges: "Integrasi sistem pembayaran lokal dan manajemen logistik untuk daerah terpencil.",
+      results: "Meningkatkan pendapatan mitra UMKM rata-rata 65% dalam 6 bulan.",
       features: [
-        "Custom CMS",
-        "Blog management system",
-        "Gallery & portfolio showcase",
-        "Multi-language support",
-        "Contact form integration",
-        "Newsletter subscription"
-      ]
+        "Product Showcase",
+        "Order Management",
+        "Payment Gateway Integration",
+        "Seller Dashboard",
+        "Customer Review System",
+        "Mobile Responsive"
+      ],
+      demoUrl: "https://umk-mmart-global-standard-msme-mark.vercel.app/"
     },
     {
       id: 3,
       title: t("portfolio.project3.title"),
       description: t("portfolio.project3.desc"),
-      fullDescription: "Aplikasi mobile banking yang aman dan user-friendly dengan berbagai fitur lengkap. Dilengkapi dengan enkripsi end-to-end, biometric authentication, dan real-time transaction monitoring.",
+      fullDescription: "Visit Nusantara adalah portal pariwisata yang bertujuan untuk memperkenalkan keindahan Indonesia kepada dunia. Melalui platform ini, wisatawan dapat menemukan destinasi tersembunyi, merencanakan perjalanan, dan memesan pemandu lokal.",
       image: projectMobileBanking,
-      tags: ["React Native", "Firebase", "API"],
-      category: "Mobile App",
-      client: "Bank Digital Nusantara",
-      duration: "6 bulan",
-      year: "2023",
-      challenges: "Keamanan data dan compliance dengan regulasi perbankan",
-      results: "500K+ downloads dalam 3 bulan pertama, rating 4.8/5.0",
+      tags: ["React", "Lucide", "Vite"],
+      category: "Web Development",
+      client: "Tourism Board",
+      duration: "2 bulan",
+      year: "2024",
+      challenges: "Menampilkan konten multimedia berkualitas tinggi dengan performa loading yang cepat.",
+      results: "Meningkatkan kunjungan wisatawan ke destinasi binaan sebesar 30%.",
       features: [
-        "Secure money transfer",
-        "Bill payments",
-        "Investment portfolio",
-        "Biometric authentication",
-        "Real-time notifications",
-        "Transaction history & reports"
-      ]
+        "Interactive Destination Maps",
+        "Local Guide Booking",
+        "Travel Itinerary Planner",
+        "Event Calendar",
+        "Multi-language Support",
+        "Virtual Tours"
+      ],
+      demoUrl: "https://visit-nusantara-sooty.vercel.app/"
     },
     {
       id: 4,
       title: t("portfolio.project4.title"),
       description: t("portfolio.project4.desc"),
-      fullDescription: "LMS komprehensif untuk institusi pendidikan dengan fitur video streaming HD, quiz interaktif, assignment tracking, dan reporting system yang detail untuk monitoring progress siswa.",
+      fullDescription: "EduForm adalah sistem manajemen data pendidikan berbasis Cloud yang memudahkan institusi dalam mengelola formulir pendaftaran, evaluasi, dan database siswa secara real-time.",
       image: projectLms,
-      tags: ["Vue.js", "Laravel", "PostgreSQL"],
+      tags: ["React", "Tailwind", "Vite"],
       category: "Web Development",
-      client: "Universitas Teknologi Modern",
-      duration: "4 bulan",
-      year: "2023",
-      challenges: "Skalabilitas untuk ribuan pengguna concurrent",
-      results: "Mendukung 10,000+ siswa dengan 99.9% uptime",
+      client: "EduTech Solusindo",
+      duration: "3 bulan",
+      year: "2024",
+      challenges: "Menjamin keamanan data sensitif siswa dan integrasi antar modul.",
+      results: "Mengurangi waktu pemrosesan administrasi sebesar 75%.",
       features: [
-        "HD video streaming",
-        "Interactive quizzes",
-        "Assignment management",
-        "Progress tracking",
-        "Discussion forums",
-        "Certificate generation"
-      ]
+        "Custom Form Builder",
+        "Real-time Data Entry",
+        "Automated Reporting",
+        "User Access Control",
+        "Email Notifications",
+        "CSV/PDF Export"
+      ],
+      demoUrl: "https://eduform.vercel.app/"
     },
     {
       id: 5,
       title: t("portfolio.project5.title"),
       description: t("portfolio.project5.desc"),
-      fullDescription: "Aplikasi food delivery yang menghubungkan restaurant, driver, dan customer dalam satu platform terintegrasi. Dilengkapi dengan real-time GPS tracking, multiple payment options, dan rating system.",
+      fullDescription: "StartFlow PSI merupakan versi enterprise dari platform StartFlow, difokuskan pada sinkronisasi data antar departemen dan optimasi alur kerja untuk perusahaan rintisan yang sedang berkembang pesat.",
       image: projectFoodDelivery,
-      tags: ["Flutter", "Firebase", "Google Maps"],
-      category: "Mobile App",
-      client: "FoodHub Indonesia",
+      tags: ["React", "Tailwind", "Framer Motion"],
+      category: "Web Development",
+      client: "PSI Venture",
       duration: "5 bulan",
       year: "2024",
-      challenges: "Optimisasi routing dan real-time GPS tracking",
-      results: "200+ restaurants terdaftar, 50K+ orders per bulan",
+      challenges: "Sinkronisasi data real-time antar ribuan pengguna aktif.",
+      results: "Optimasi alur kerja tim meningkat hingga 50%.",
       features: [
-        "Real-time order tracking",
-        "Multiple payment methods",
-        "Rating & review system",
-        "Push notifications",
-        "Promo & voucher management",
-        "Driver management system"
-      ]
+        "Advanced Workflow Automation",
+        "Inter-departmental Sync",
+        "Predictive Analytics",
+        "Custom Branding",
+        "SLA Monitoring",
+        "API Integration"
+      ],
+      demoUrl: "https://startflow-psi.vercel.app/"
     },
     {
       id: 6,
       title: t("portfolio.project6.title"),
       description: t("portfolio.project6.desc"),
-      fullDescription: "Portal kesehatan digital yang memudahkan pasien untuk booking appointment, konsultasi online, dan akses medical records. Dilengkapi dengan video consultation dan prescription management.",
+      fullDescription: "BookEase adalah solusi pemesanan yang dapat disesuaikan untuk berbagai jenis bisnis, mulai dari salon hingga klinik, memungkinkan pelanggan melakukan reservasi kapan saja dan di mana saja.",
       image: projectHealthcare,
-      tags: ["Next.js", "Express", "MongoDB"],
+      tags: ["React", "Shadcn UI", "Tailwind"],
       category: "Web Development",
-      client: "HealthCare Plus",
-      duration: "4 bulan",
-      year: "2023",
-      challenges: "Compliance dengan standar keamanan data medis (HIPAA)",
-      results: "15,000+ konsultasi online dalam 6 bulan pertama",
+      client: "Service Hub ID",
+      duration: "3 bulan",
+      year: "2024",
+      challenges: "Manajemen jadwal yang kompleks dan pencegahan double booking.",
+      results: "Meningkatkan jumlah reservasi online sebesar 80%.",
       features: [
-        "Doctor appointment booking",
-        "Video consultation",
-        "Medical records management",
-        "Prescription tracking",
-        "Health articles & tips",
-        "Emergency contact system"
-      ]
+        "Real-time Scheduling",
+        "Staff Management",
+        "Customer Reminders",
+        "Service Catalog",
+        "Payment on Booking",
+        "Mobile App Sync"
+      ],
+      demoUrl: "https://bookease-jade.vercel.app/"
     },
     {
       id: 7,
       title: t("portfolio.project7.title"),
       description: t("portfolio.project7.desc"),
-      fullDescription: "Platform pencarian properti yang memudahkan pengguna mencari rumah atau apartemen impian. Dilengkapi dengan tur virtual 360, kalkulator KPR, dan chat langsung dengan agen.",
+      fullDescription: "Aplikasi mobile yang memberikan informasi lengkap tentang berbagai acara, konser, dan festival. Memungkinkan pengguna untuk mendapatkan tiket dan notifikasi terbaru langsung di ponsel mereka.",
       image: projectRealEstate,
-      tags: ["Next.js", "Tailwind", "Supabase"],
-      category: "Web Development",
-      client: "Estate Global",
-      duration: "3 bulan",
+      tags: ["React Native", "Expo", "Firebase"],
+      category: "Mobile App",
+      client: "Event Organizer Corp",
+      duration: "4 bulan",
       year: "2024",
-      challenges: "Implementasi tur virtual dan manajemen database properti yang besar",
-      results: "Digunakan oleh 50+ agen properti ternama",
-      features: ["360 Virtual Tour", "Mortgage Calculator", "Direct Agent Chat", "Advanced Filters"]
+      challenges: "Handling lonjakan pengguna saat pembukaan penjualan tiket.",
+      results: "50rb+ pengguna aktif dalam sebulan pertama.",
+      features: ["Push Notifications", "E-Ticket Wallet", "Social Sharing", "Event Maps", "Rating System"],
+      demoUrl: "https://event-info-blond.vercel.app/"
     },
     {
       id: 8,
       title: t("portfolio.project8.title"),
       description: t("portfolio.project8.desc"),
-      fullDescription: "Aplikasi kebugaran yang membantu pengguna melacak aktivitas olahraga, asupan kalori, dan progres kesehatan secara real-time.",
+      fullDescription: "BizTrack membantu pemilik bisnis memantau inventaris, penjualan, dan kinerja tim di lapangan melalui satu aplikasi yang terintegrasi.",
       image: projectFitness,
-      tags: ["React Native", "HealthKit", "Firebase"],
+      tags: ["React Native", "Redux", "API"],
       category: "Mobile App",
-      client: "FitLife Studio",
+      client: "Retail Monitoring Solusi",
       duration: "4 bulan",
       year: "2024",
-      challenges: "Sinkronisasi data dengan wearable devices",
-      results: "Meningkatkan retensi member gym sebesar 30%",
-      features: ["Workout Tracking", "Calorie Counter", "Progress Charts", "Social Challenges"]
+      challenges: "Offline data synchronization untuk area dengan sinyal lemah.",
+      results: "Akurasi data inventaris meningkat menjadi 99%.",
+      features: ["Real-time Tracking", "Inventory Management", "Sales Reports", "Team Attendance", "Cloud Sync"],
+      demoUrl: "https://biztrack-phi.vercel.app/"
     },
     {
       id: 9,
       title: t("portfolio.project9.title"),
       description: t("portfolio.project9.desc"),
-      fullDescription: "Dashboard analitik canggih untuk perusahaan skala menengah hingga besar untuk memantau performa bisnis di berbagai departemen.",
+      fullDescription: "Pusat informasi dan layanan digital untuk UMKM, menyediakan materi edukasi, akses pasar, dan alat manajemen usaha sederhana dalam genggaman.",
       image: projectSaas,
-      tags: ["React", "D3.js", "Tailwind"],
-      category: "Web Development",
-      client: "Logix Analytics",
+      tags: ["React Native", "NativeWind", "Supabase"],
+      category: "Mobile App",
+      client: "Dinas Koperasi & UMKM",
       duration: "5 bulan",
       year: "2024",
-      challenges: "Visualisasi data besar dengan performa tinggi",
-      results: "Penghematan waktu pelaporan hingga 80%",
-      features: ["Custom Dashboards", "Data Exporting", "Role-based Access", "Predictive Analytics"]
+      challenges: "Memastikan aplikasi tetap ringan untuk HP spesifikasi rendah.",
+      results: "Mendampingi 1000+ pelaku UMKM dalam digitalisasi.",
+      features: ["Learning Module", "Marketplace Access", "Financial Tracker", "Community Chat", "Official News"],
+      demoUrl: "https://umkm-eta.vercel.app/"
     },
     {
       id: 10,
       title: t("portfolio.project10.title"),
       description: t("portfolio.project10.desc"),
-      fullDescription: "Sistem reservasi travel yang terintegrasi with berbagai provider penerbangan dan hotel di seluruh dunia.",
+      fullDescription: "Platform pengaduan warga untuk meningkatkan komunikasi antara masyarakat dan pemerintah setempat demi pelayanan publik yang lebih baik.",
       image: projectTravel,
-      tags: ["Vue.js", "Python", "AWS"],
-      category: "Web Development",
-      client: "TravelEase",
+      tags: ["React Native", "Expo", "Maps"],
+      category: "Mobile App",
+      client: "Smart City Initiative",
       duration: "6 bulan",
-      year: "2023",
-      challenges: "Integrasi API dengan ribuan provider secara stabil",
-      results: "Memproses 1000+ booking setiap harinya",
-      features: ["Flight Search", "Hotel Booking", "Payment Installments", "Booking Management"]
+      year: "2024",
+      challenges: "Verifikasi lokasi laporan secara akurat dan real-time.",
+      results: "Waktu respon pemerintah meningkat 60% lebih cepat.",
+      features: ["Geotagging Reports", "Status Tracking", "Emergency Button", "Direct Feedback", "AI Categorization"],
+      demoUrl: "https://lapor-warga-nine.vercel.app/"
     },
     {
       id: 11,
       title: t("portfolio.project11.title"),
       description: t("portfolio.project11.desc"),
-      fullDescription: "Aplikasi untuk mengontrol seluruh perangkat pintar di rumah dari satu tempat dengan tingkat keamanan yang tinggi.",
+      fullDescription: "Aplikasi pembelajaran mobile yang menawarkan kursus video interaktif dan kuis untuk meningkatkan skill profesional pengguna.",
       image: projectSmartHome,
-      tags: ["Flutter", "MQTT", "Node.js"],
+      tags: ["React Native", "Context API", "Vite"],
       category: "Mobile App",
-      client: "SmartHome Tech",
+      client: "Global Learning Inc",
       duration: "5 bulan",
-      year: "2023",
-      challenges: "Latency rendah untuk kontrol real-time",
-      results: "Rating 4.9 di App Store dan Play Store",
-      features: ["Device Grouping", "Automated Scenes", "Energy Monitoring", "Security Alerts"]
+      year: "2024",
+      challenges: "Streaming video berkualitas tinggi dengan bandwidth rendah.",
+      results: "Rating 4.9 di Play Store dengan 100rb+ download.",
+      features: ["Offline Video", "Interactive Quizzes", "Skill Certificates", "Progress Roadmap", "Download Manager"],
+      demoUrl: "https://course-lesson.vercel.app/"
     },
     {
       id: 12,
       title: t("portfolio.project12.title"),
       description: t("portfolio.project12.desc"),
-      fullDescription: "Solusi end-to-end untuk perusahaan logistik dalam mengelola pengiriman, armada, dan inventaris secara efisien.",
+      fullDescription: "Sistem reservasi pintar untuk menghindari kerumunan, memungkinkan pengguna membooking waktu kunjungan mereka di mall, taman, atau kantor.",
       image: projectLogistics,
-      tags: ["React", "Go", "PostgreSQL"],
-      category: "Web Development",
-      client: "FastLogistics ID",
-      duration: "7 bulan",
+      tags: ["React Native", "Expo", "Shadcn"],
+      category: "Mobile App",
+      client: "Property Management ID",
+      duration: "3 bulan",
       year: "2024",
-      challenges: "Optimasi rute dan tracking GPS multi-armada",
-      results: "Efisiensi pengiriman meningkat 25%",
-      features: ["Fleet Tracking", "Order Management", "Route Optimization", "Inventory Sync"]
+      challenges: "Menghitung kapasitas area secara dinamis.",
+      results: "Mengurangi waktu tunggu antrean hingga 70%.",
+      features: ["QR Code Entry", "Capacity Monitoring", "Smart Reminders", "Waitlist System", "Review Place"],
+      demoUrl: "https://smartbooking-kappa.vercel.app/"
     },
   ];
 
@@ -292,12 +304,12 @@ const PortfolioDetail = () => {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-xl overflow-hidden shadow-elegant"
+                className="rounded-xl overflow-hidden shadow-elegant bg-white"
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-[400px] object-cover"
+                  className={`w-full h-[400px] ${project.category === "Web Development" ? "object-cover" : "object-contain object-bottom"}`}
                 />
               </motion.div>
             </FadeIn>
@@ -330,12 +342,22 @@ const PortfolioDetail = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <Badge key={tag} variant="outline">
-                    {tag}
-                  </Badge>
-                ))}
+              <div className="flex flex-wrap items-center gap-4 mb-8">
+                {project.demoUrl && (
+                  <Button asChild size="lg" className="gap-2">
+                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4" />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge key={tag} variant="outline">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -412,11 +434,11 @@ const PortfolioDetail = () => {
                           transition={{ duration: 0.3 }}
                         >
                           <Card className="group overflow-hidden hover:shadow-hover transition-all duration-300 flex flex-col h-full">
-                            <div className="relative overflow-hidden h-40">
+                            <div className="relative overflow-hidden h-40 bg-white">
                               <motion.img
                                 src={relatedProject.image}
                                 alt={relatedProject.title}
-                                className="w-full h-full object-cover"
+                                className={`w-full h-full ${relatedProject.category === "Web Development" ? "object-cover" : "object-contain object-bottom"}`}
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.5 }}
                               />

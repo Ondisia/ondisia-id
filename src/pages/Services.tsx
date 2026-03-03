@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+
 import { 
   Code2, 
   Smartphone, 
@@ -217,7 +217,13 @@ const Services = () => {
               className="inline-block"
             >
               <Button variant="hero" size="lg" asChild className="bg-white text-primary hover:bg-white/90 shadow-glow">
-                <Link to="/contact">{t("services.cta.button")}</Link>
+                <a
+                  href={`https://wa.me/6282229062398?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("services.cta.button")}
+                </a>
               </Button>
             </motion.div>
           </FadeIn>

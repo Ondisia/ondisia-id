@@ -52,7 +52,13 @@ const Navbar = () => {
             <LanguageToggle />
             <ThemeToggle />
             <Button variant="hero" size="sm" asChild>
-              <Link to="/contact">{t("nav.cta")}</Link>
+              <a
+                href={`https://wa.me/6282229062398?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("nav.cta")}
+              </a>
             </Button>
           </div>
 
@@ -92,9 +98,14 @@ const Navbar = () => {
             <div className="flex items-center gap-2 mt-4">
               <ThemeToggle />
               <Button variant="hero" size="sm" className="flex-1" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <a
+                  href={`https://wa.me/6282229062398?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                >
                   {t("nav.cta")}
-                </Link>
+                </a>
               </Button>
             </div>
           </motion.div>

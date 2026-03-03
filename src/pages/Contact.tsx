@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
@@ -17,16 +18,26 @@ const Contact = () => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    phone: "",
     service: "",
     message: "",
   });
 
+  const phoneNumber = "6282229062398";
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const waMessage = `Halo Ondisia! 👋
+
+*Nama:* ${formData.name}
+*Layanan:* ${formData.service || "-"}
+*Pesan:* ${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
+    window.open(whatsappUrl, "_blank");
+
     toast.success(t("contact.form.success"));
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    setFormData({ name: "", service: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -140,8 +151,11 @@ const Contact = () => {
             <FadeIn direction="right" delay={0.2}>
               <Card className="border-border shadow-card">
                 <CardContent className="pt-6">
-                  <h2 className="text-2xl font-bold mb-6">{t("contact.form.title")}</h2>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <h2 className="text-2xl font-bold mb-2">{t("contact.form.title")}</h2>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    {t("contact.form.waNote")}
+                  </p>
+                  <form onSubmit={handleSubmit} className="space-y-5">
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -165,57 +179,32 @@ const Contact = () => {
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 }}
                     >
-                      <Label htmlFor="email">{t("contact.form.email")} *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="email@example.com"
-                        className="mt-1"
-                      />
+                      <Label htmlFor="service">{t("contact.form.service")}</Label>
+                      <Select
+                        value={formData.service}
+                        onValueChange={(value) => setFormData({ ...formData, service: value })}
+                      >
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder={t("contact.form.servicePlaceholder")} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="Web Development">{t("services.web.title")}</SelectItem>
+                          <SelectItem value="Mobile App Development">{t("services.mobile.title")}</SelectItem>
+                          <SelectItem value="UI/UX Design">{t("services.design.title")}</SelectItem>
+                          <SelectItem value="Backend Development">{t("services.backend.title")}</SelectItem>
+                          <SelectItem value="SEO Optimization">{t("services.seo.title")}</SelectItem>
+                          <SelectItem value="Maintenance & Support">{t("services.maintenance.title")}</SelectItem>
+                          <SelectItem value="Konsultasi IT">{t("services.consulting.title")}</SelectItem>
+                          <SelectItem value="Pengerjaan Tugas">{t("home.services.task.title")}</SelectItem>
+                          <SelectItem value="Kursus Website">{t("home.services.course.title")}</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 }}
-                    >
-                      <Label htmlFor="phone">{t("contact.form.phone")} *</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        placeholder="+62 812-3456-7890"
-                        className="mt-1"
-                      />
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4 }}
-                    >
-                      <Label htmlFor="service">{t("contact.form.service")}</Label>
-                      <Input
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleChange}
-                        placeholder={t("contact.form.servicePlaceholder")}
-                        className="mt-1"
-                      />
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5 }}
                     >
                       <Label htmlFor="message">{t("contact.form.message")} *</Label>
                       <Textarea

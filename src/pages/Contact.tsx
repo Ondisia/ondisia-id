@@ -22,7 +22,7 @@ const Contact = () => {
     message: "",
   });
 
-  const phoneNumber = "6282229062398";
+  const phoneNumber = "6285178962397";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,8 +54,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: t("contact.info.phone"),
-      detail: "+62 822-2906-2398",
-      link: "tel:+6282229062398",
+      detail: "+62 851-7896-2397",
+      link: "tel:+6285178962397",
     },
     {
       icon: MapPin,

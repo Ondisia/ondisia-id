@@ -53,7 +53,7 @@ const Navbar = () => {
             <ThemeToggle />
             <Button variant="hero" size="sm" asChild>
               <a
-                href={`https://wa.me/6282229062398?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                href={`https://wa.me/6285178962397?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -99,7 +99,7 @@ const Navbar = () => {
               <ThemeToggle />
               <Button variant="hero" size="sm" className="flex-1" asChild>
                 <a
-                  href={`https://wa.me/6282229062398?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                  href={`https://wa.me/6285178962397?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}

@@ -49,7 +49,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" className="bg-white text-slate-900 hover:bg-blue-50 text-base px-8 py-6 rounded-full font-semibold shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:scale-105" asChild>
                   <a 
-                    href={`https://wa.me/6282229062398?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi mengenai pembuatan website/aplikasi.")}`}
+                    href={`https://wa.me/6285178962397?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi mengenai pembuatan website/aplikasi.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

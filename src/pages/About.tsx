@@ -60,7 +60,7 @@ const About = () => {
               <motion.img
                 src={teamImage}
                 alt="Tim Ondisia"
-                className="rounded-lg shadow-card w-full max-w-md h-auto object-cover"
+                className="w-full max-w-md h-auto object-cover"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               />

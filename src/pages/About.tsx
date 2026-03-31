@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import teamImage from "@/assets/about-team.png";
+import teamImage from "@/assets/ab.png";
 
 const About = () => {
   const { t } = useLanguage();

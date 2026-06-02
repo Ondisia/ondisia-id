@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Zap, Users, BookOpen, GraduationCap, Code, ChevronRight, CheckCircle, Globe, Target, Star, Award, Clock, Smartphone } from "lucide-react";
+import { Zap, Users, BookOpen, GraduationCap, Code, ChevronRight, CheckCircle, Globe, Target, Star, Award, Clock, Smartphone, ShoppingCart, Mail, Library } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -119,6 +119,103 @@ const Index = () => {
               <div className="absolute -top-10 -right-10 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px]"></div>
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-indigo-500/10 rounded-full blur-[80px]"></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ekosistem / Our Apps */}
+      <section id="apps" className="py-24 bg-muted/10 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center space-y-4 mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground"
+            >
+              {t("home.apps.title")}
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.4 }}
+              className="text-xl text-muted-foreground max-w-3xl mx-auto"
+            >
+              {t("home.apps.subtitle")}
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: t("apps.store.title"),
+                desc: t("apps.store.desc"),
+                status: t("apps.store.status"),
+                icon: ShoppingCart,
+                color: "emerald",
+                link: "https://store.ondisia.com"
+              },
+              {
+                title: t("apps.card.title"),
+                desc: t("apps.card.desc"),
+                status: t("apps.card.status"),
+                icon: Mail,
+                color: "blue",
+                link: "#"
+              },
+              {
+                title: t("apps.pes.title"),
+                desc: t("apps.pes.desc"),
+                status: t("apps.pes.status"),
+                icon: Library,
+                color: "amber",
+                link: "#"
+              }
+            ].map((app, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * idx, duration: 0.4 }}
+              >
+                <Card className="h-full hover:shadow-elegant transition-all duration-300 border border-border/50 bg-background/50 backdrop-blur-sm group p-2 relative overflow-hidden">
+                  <div className={`absolute top-0 right-0 p-4`}>
+                    <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                      app.status === 'Live' || app.status === 'Live' 
+                        ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400'
+                        : 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                    }`}>
+                      {app.status}
+                    </span>
+                  </div>
+                  <CardHeader className="pb-4 mt-6">
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${
+                      app.color === "emerald" ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400" :
+                      app.color === "blue" ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" :
+                      "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400"
+                    }`}>
+                      <app.icon className="h-8 w-8" />
+                    </div>
+                    <CardTitle className="text-2xl font-bold">{app.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <CardDescription className="text-muted-foreground text-base leading-relaxed">
+                      {app.desc}
+                    </CardDescription>
+                    {app.link !== "#" && (
+                      <Button variant="outline" className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
+                        <a href={app.link} target="_blank" rel="noopener noreferrer">
+                          Kunjungi {app.title} <ChevronRight className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    )}
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

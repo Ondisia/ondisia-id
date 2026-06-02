@@ -18,6 +18,7 @@ const translations = {
     "nav.services": "Layanan",
     "nav.portfolio": "Portfolio",
     "nav.contact": "Kontak",
+    "nav.apps": "Produk Kami",
     "nav.cta": "Konsultasi Gratis",
     
     // Home Page
@@ -29,6 +30,18 @@ const translations = {
     "home.hero.feat2": "Harga Terjangkau",
     "home.hero.feat3": "Support 24/7",
     
+    "home.apps.title": "Ekosistem Ondisia",
+    "home.apps.subtitle": "Produk dan aplikasi inovatif yang kami kembangkan untuk berbagai kebutuhan.",
+    "apps.store.title": "Ondistore",
+    "apps.store.desc": "Platform marketplace untuk berbagai produk digital dan layanan kami.",
+    "apps.store.status": "Live",
+    "apps.card.title": "Ondicard",
+    "apps.card.desc": "Platform pembuatan undangan digital yang modern dan interaktif.",
+    "apps.card.status": "Dalam Pengembangan",
+    "apps.pes.title": "Ondipes",
+    "apps.pes.desc": "Sistem Informasi Manajemen Pesantren yang terintegrasi penuh.",
+    "apps.pes.status": "Dalam Pengembangan",
+
     "home.about.title": "Tentang Ondisia",
     "home.about.desc": "Ondisia adalah penyedia jasa digital terpercaya yang berfokus pada pembuatan website profesional, optimasi website, jasa pengerjaan tugas, serta kursus pembuatan website dari dasar hingga mahir.",
     "home.about.item1": "Pembuatan Website",
@@ -259,6 +272,7 @@ const translations = {
     "nav.services": "Services",
     "nav.portfolio": "Portfolio",
     "nav.contact": "Contact",
+    "nav.apps": "Our Apps",
     "nav.cta": "Free Consultation",
     
     // Home Page
@@ -270,6 +284,18 @@ const translations = {
     "home.hero.feat2": "Affordable Price",
     "home.hero.feat3": "24/7 Support",
     
+    "home.apps.title": "Ondisia Ecosystem",
+    "home.apps.subtitle": "Innovative products and applications we develop for various needs.",
+    "apps.store.title": "Ondistore",
+    "apps.store.desc": "Marketplace platform for our digital products and services.",
+    "apps.store.status": "Live",
+    "apps.card.title": "Ondicard",
+    "apps.card.desc": "Modern and interactive digital invitation creation platform.",
+    "apps.card.status": "In Development",
+    "apps.pes.title": "Ondipes",
+    "apps.pes.desc": "Integrated Islamic Boarding School Management Information System.",
+    "apps.pes.status": "In Development",
+
     "home.about.title": "About Ondisia",
     "home.about.desc": "Ondisia is a trusted digital service provider focusing on professional website creation, website optimization, task assistance, and website development courses from basic to advanced.",
     "home.about.item1": "Website Creation",

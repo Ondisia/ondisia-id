@@ -37,19 +37,39 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={cn(
-                  "text-md font-medium transition-colors hover:text-primary relative group",
-                  isActive(link.path) ? "text-primary" : "text-foreground/80"
-                )}
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isHashLink = link.path.includes("#");
+              
+              if (isHashLink) {
+                return (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    className={cn(
+                      "text-md font-medium transition-colors hover:text-primary relative group",
+                      isActive(link.path) ? "text-primary" : "text-foreground/80"
+                    )}
+                  >
+                    {link.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                  </a>
+                );
+              }
+              
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={cn(
+                    "text-md font-medium transition-colors hover:text-primary relative group",
+                    isActive(link.path) ? "text-primary" : "text-foreground/80"
+                  )}
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                </Link>
+              );
+            })}
             <LanguageToggle />
             <ThemeToggle />
             <Button variant="hero" size="sm" asChild>
@@ -83,19 +103,39 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden py-4"
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "block py-2 text-sm font-medium transition-colors hover:text-primary",
-                  isActive(link.path) ? "text-primary" : "text-foreground/80"
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isHashLink = link.path.includes("#");
+              
+              if (isHashLink) {
+                return (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "block py-2 text-sm font-medium transition-colors hover:text-primary",
+                      isActive(link.path) ? "text-primary" : "text-foreground/80"
+                    )}
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
+              
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "block py-2 text-sm font-medium transition-colors hover:text-primary",
+                    isActive(link.path) ? "text-primary" : "text-foreground/80"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             <div className="flex items-center gap-2 mt-4">
               <ThemeToggle />
               <Button variant="hero" size="sm" className="flex-1" asChild>

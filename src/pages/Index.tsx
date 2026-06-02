@@ -155,7 +155,7 @@ const Index = () => {
                 status: t("apps.store.status"),
                 icon: ShoppingCart,
                 color: "emerald",
-                link: "https://store.ondisia.com"
+                link: "https://ondistore.com"
               },
               {
                 title: t("apps.card.title"),

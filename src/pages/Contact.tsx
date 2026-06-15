@@ -13,6 +13,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { CONTACT, waUrl } from "@/lib/contact";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -22,20 +23,10 @@ const Contact = () => {
     message: "",
   });
 
-  const phoneNumber = "6285178962397";
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const waMessage = `Halo Ondisia! 👋
-
-*Nama:* ${formData.name}
-*Layanan:* ${formData.service || "-"}
-*Pesan:* ${formData.message}`;
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
-    window.open(whatsappUrl, "_blank");
-
+    const waMessage = `Halo Ondisia! 👋\n\n*Nama:* ${formData.name}\n*Layanan:* ${formData.service || "-"}\n*Pesan:* ${formData.message}`;
+    window.open(waUrl(waMessage), "_blank");
     toast.success(t("contact.form.success"));
     setFormData({ name: "", service: "", message: "" });
   };
@@ -48,19 +39,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: t("contact.info.email"),
-      detail: "ondisia.id@gmail.com",
-      link: "mailto:ondisia.id@gmail.com",
+      detail: CONTACT.email,
+      link: `mailto:${CONTACT.email}`,
     },
     {
       icon: Phone,
       title: t("contact.info.phone"),
-      detail: "+62 851-7896-2397",
-      link: "tel:+6285178962397",
+      detail: CONTACT.phone,
+      link: `tel:+${CONTACT.whatsapp}`,
     },
     {
       icon: MapPin,
       title: t("contact.info.address"),
-      detail: "Probolinggo, Jawa Timur, Indonesia",
+      detail: CONTACT.address,
       link: "#",
     },
   ];

@@ -17,6 +17,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { waUrl, WA_DEFAULT_MSG } from "@/lib/contact";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -218,7 +219,7 @@ const Services = () => {
             >
               <Button variant="hero" size="lg" asChild className="bg-white text-primary hover:bg-white/90 shadow-glow">
                 <a
-                  href={`https://wa.me/6285178962397?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                  href={waUrl(WA_DEFAULT_MSG)}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

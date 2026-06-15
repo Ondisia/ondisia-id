@@ -8,6 +8,7 @@ import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import logo from "@/assets/ondisia.png";
+import { waUrl, WA_DEFAULT_MSG } from "@/lib/contact";
 
 const Navbar = () => {
   const { t } = useLanguage();
@@ -74,7 +75,7 @@ const Navbar = () => {
             <ThemeToggle />
             <Button variant="hero" size="sm" asChild>
               <a
-                href={`https://wa.me/6285178962397?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                href={waUrl(WA_DEFAULT_MSG)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -140,7 +141,7 @@ const Navbar = () => {
               <ThemeToggle />
               <Button variant="hero" size="sm" className="flex-1" asChild>
                 <a
-                  href={`https://wa.me/6285178962397?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi gratis mengenai layanan pembuatan website/aplikasi. Mohon informasinya lebih lanjut.")}`}
+                  href={waUrl(WA_DEFAULT_MSG)}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}

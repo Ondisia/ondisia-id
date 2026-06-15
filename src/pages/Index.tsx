@@ -1,11 +1,47 @@
 import { Button } from "@/components/ui/button";
-import { Zap, Users, BookOpen, GraduationCap, Code, ChevronRight, CheckCircle, Globe, Target, Star, Award, Clock, Smartphone, ShoppingCart, Mail, Library } from "lucide-react";
+import { Zap, Users, Lightbulb, GraduationCap, Code, ChevronRight, CheckCircle, Globe, Target, Star, Award, Clock, Smartphone, ShoppingCart, Mail, Library, Quote, ChevronDown } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
+import { waUrl, WA_DEFAULT_MSG } from "@/lib/contact";
+
+import { useState } from "react";
+
+const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="border border-border/50 rounded-2xl overflow-hidden"
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        className="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-foreground hover:bg-muted/30 transition-colors"
+      >
+        <span>{question}</span>
+        <motion.div animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
+          <ChevronDown className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+        </motion.div>
+      </button>
+      {open && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          className="px-6 pb-5 text-muted-foreground leading-relaxed"
+        >
+          {answer}
+        </motion.div>
+      )}
+    </motion.div>
+  );
+};
 
 const Index = () => {
   const { t } = useLanguage();
@@ -49,7 +85,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" className="bg-white text-slate-900 hover:bg-blue-50 text-base px-8 py-6 rounded-full font-semibold shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:scale-105" asChild>
                   <a 
-                    href={`https://wa.me/6285178962397?text=${encodeURIComponent("Halo Ondisia, saya tertarik untuk konsultasi mengenai pembuatan website/aplikasi.")}`}
+                    href={waUrl(WA_DEFAULT_MSG)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -247,7 +283,7 @@ const Index = () => {
               {[
                 { icon: Code, color: "blue", label: t("home.about.item1"), desc: t("home.about.item1Desc") },
                 { icon: Zap, color: "emerald", label: t("home.about.item2"), desc: t("home.about.item2Desc") },
-                { icon: BookOpen, color: "purple", label: t("home.about.item3"), desc: t("home.about.item3Desc") },
+                { icon: Lightbulb, color: "purple", label: t("home.about.item3"), desc: t("home.about.item3Desc") },
                 { icon: GraduationCap, color: "amber", label: t("home.about.item4"), desc: t("home.about.item4Desc") },
               ].map((item, idx) => (
                 <motion.div
@@ -291,7 +327,7 @@ const Index = () => {
             <Card className="hover:shadow-elegant transition-all duration-300 border-0 bg-background/50 backdrop-blur-sm group p-2">
               <CardHeader className="text-center pb-4">
                 <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="h-10 w-10 text-blue-600 dark:text-blue-400" />
+                  <Lightbulb className="h-10 w-10 text-blue-600 dark:text-blue-400" />
                 </div>
                 <CardTitle className="text-xl font-bold">{t("home.services.task.title")}</CardTitle>
               </CardHeader>
@@ -431,6 +467,92 @@ const Index = () => {
                   <p className="text-muted-foreground leading-relaxed italic text-sm">{item.desc}</p>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimoni */}
+      <section className="py-24 bg-muted/10">
+        <div className="container mx-auto px-6">
+          <div className="text-center space-y-4 mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground"
+            >
+              {t("testimonials.title")}
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            >
+              {t("testimonials.subtitle")}
+            </motion.p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * i, duration: 0.4 }}
+                className="bg-card border border-border/50 rounded-3xl p-8 flex flex-col gap-6 hover:shadow-elegant transition-all duration-300"
+              >
+                <Quote className="h-8 w-8 text-primary/40" />
+                <p className="text-muted-foreground leading-relaxed italic flex-grow">
+                  "{t(`testimonials.${i}.text`)}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+                    {t(`testimonials.${i}.name`).charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">{t(`testimonials.${i}.name`)}</p>
+                    <p className="text-sm text-muted-foreground">{t(`testimonials.${i}.role`)}</p>
+                  </div>
+                </div>
+                <div className="flex gap-1">
+                  {Array.from({ length: 5 }).map((_, idx) => (
+                    <Star key={idx} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <div className="text-center space-y-4 mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground"
+            >
+              {t("faq.title")}
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-xl text-muted-foreground"
+            >
+              {t("faq.subtitle")}
+            </motion.p>
+          </div>
+          <div className="space-y-4">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <FaqItem key={i} question={t(`faq.q${i}`)} answer={t(`faq.a${i}`)} />
             ))}
           </div>
         </div>

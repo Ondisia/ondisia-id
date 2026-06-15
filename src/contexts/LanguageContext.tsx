@@ -48,18 +48,18 @@ const translations = {
     "home.about.item1Desc": "Website profesional dan modern",
     "home.about.item2": "Optimasi Website",
     "home.about.item2Desc": "Meningkatkan performa website",
-    "home.about.item3": "Jasa Pengerjaan Tugas",
-    "home.about.item3Desc": "Bantu mengerjakan tugas website",
+    "home.about.item3": "Konsultasi Teknologi",
+    "home.about.item3Desc": "Solusi & strategi digital bisnis",
     "home.about.item4": "Kursus Website",
     "home.about.item4Desc": "Belajar dari dasar hingga mahir",
 
     "home.services.title": "Layanan Kami",
     "home.services.subtitle": "Solusi lengkap untuk kebutuhan website dan pembelajaran coding Anda",
-    "home.services.task.title": "Pengerjaan Tugas Website",
-    "home.services.task.desc": "Bantu mengerjakan tugas website untuk sekolah dan kuliah dengan hasil yang memuaskan.",
-    "home.services.task.feat1": "Tepat waktu",
-    "home.services.task.feat2": "Kualitas terbaik",
-    "home.services.task.feat3": "Dokumen lengkap",
+    "home.services.task.title": "Konsultasi Teknologi & IT",
+    "home.services.task.desc": "Konsultasi strategis untuk transformasi digital bisnis Anda, mulai dari arsitektur sistem hingga pemilihan teknologi yang tepat.",
+    "home.services.task.feat1": "Audit sistem & teknologi",
+    "home.services.task.feat2": "Strategi transformasi digital",
+    "home.services.task.feat3": "Roadmap pengembangan",
     "home.services.opt.title": "Optimasi Website",
     "home.services.opt.desc": "Meningkatkan performa website Anda untuk loading yang lebih cepat dan SEO friendly.",
     "home.services.opt.feat1": "Optimasi kecepatan",
@@ -80,8 +80,8 @@ const translations = {
     "home.why.subtitle": "Keunggulan yang membuat Ondisia menjadi pilihan terbaik untuk kebutuhan website Anda",
     "home.why.item1.title": "Cepat, Rapi, dan Profesional",
     "home.why.item1.desc": "Pengerjaan tepat waktu dengan hasil yang rapi dan profesional sesuai standar industri.",
-    "home.why.item2.title": "Cocok untuk Tugas Sekolah/Kuliah",
-    "home.why.item2.desc": "Pengalaman membantu berbagai tugas website dari tingkat sekolah hingga perguruan tinggi.",
+    "home.why.item2.title": "Solusi Bisnis Terarah",
+    "home.why.item2.desc": "Pengalaman membantu berbagai jenis bisnis menemukan solusi teknologi yang tepat dan efisien.",
     "home.why.item3.title": "Konsultasi Gratis",
     "home.why.item3.desc": "Konsultasi gratis untuk membantu menentukan solusi terbaik untuk kebutuhan Anda.",
     "home.why.item4.title": "Transparansi Harga",
@@ -252,6 +252,33 @@ const translations = {
     "detail.client": "Klien",
     "detail.duration": "Durasi",
     
+    // Testimonials
+    "testimonials.title": "Apa Kata Klien Kami",
+    "testimonials.subtitle": "Kepuasan klien adalah prioritas utama kami",
+    "testimonials.1.name": "Rizky Firmansyah",
+    "testimonials.1.role": "Founder, StartFlow",
+    "testimonials.1.text": "Ondisia benar-benar mengubah cara pandang kami soal digital. Website yang dibuat sangat profesional dan pengerjaannya cepat. Sangat rekomendasikan!",
+    "testimonials.2.name": "Siti Rahmawati",
+    "testimonials.2.role": "Owner, UMKM Batik Nusantara",
+    "testimonials.2.text": "Awalnya saya ragu, tapi hasilnya melebihi ekspektasi. Tim Ondisia sangat responsif dan sabar menjelaskan setiap prosesnya.",
+    "testimonials.3.name": "Andi Prasetyo",
+    "testimonials.3.role": "CTO, EduTech Solusindo",
+    "testimonials.3.text": "Konsultasi IT dari Ondisia sangat membantu kami memilih stack teknologi yang tepat. Hasilnya sistem kami jauh lebih scalable sekarang.",
+
+    // FAQ
+    "faq.title": "Pertanyaan yang Sering Ditanyakan",
+    "faq.subtitle": "Temukan jawaban untuk pertanyaan umum seputar layanan kami",
+    "faq.q1": "Berapa lama waktu pengerjaan website?",
+    "faq.a1": "Tergantung kompleksitas project. Landing page biasanya 3–7 hari, website company profile 1–2 minggu, dan aplikasi web/mobile 1–3 bulan.",
+    "faq.q2": "Apakah ada garansi setelah project selesai?",
+    "faq.a2": "Ya, kami memberikan garansi maintenance gratis selama 1 bulan setelah project selesai untuk perbaikan bug dan perubahan minor.",
+    "faq.q3": "Teknologi apa yang digunakan?",
+    "faq.a3": "Kami menggunakan teknologi terkini seperti React, Next.js, React Native, Node.js, dan berbagai cloud platform sesuai kebutuhan project.",
+    "faq.q4": "Bagaimana sistem pembayaran?",
+    "faq.a4": "Pembayaran dilakukan 50% di awal sebagai tanda jadi, dan 50% setelah project selesai dan disetujui klien.",
+    "faq.q5": "Apakah bisa request revisi?",
+    "faq.a5": "Tentu. Kami menyediakan 3x revisi gratis selama proses pengerjaan. Revisi tambahan dapat didiskusikan bersama.",
+
     // Footer
     "footer.nav": "Navigasi",
     "footer.services": "Layanan",
@@ -302,18 +329,18 @@ const translations = {
     "home.about.item1Desc": "Professional and modern websites",
     "home.about.item2": "Website Optimization",
     "home.about.item2Desc": "Improving website performance",
-    "home.about.item3": "Task Assistance",
-    "home.about.item3Desc": "Help with website tasks",
+    "home.about.item3": "Tech Consulting",
+    "home.about.item3Desc": "Digital solutions & business strategy",
     "home.about.item4": "Website Courses",
     "home.about.item4Desc": "Learn from basic to advanced",
 
     "home.services.title": "Our Services",
     "home.services.subtitle": "Complete solutions for your website and coding learning needs",
-    "home.services.task.title": "Website Task Assistance",
-    "home.services.task.desc": "Helping with website tasks for school and college with satisfying results.",
-    "home.services.task.feat1": "On time",
-    "home.services.task.feat2": "Best quality",
-    "home.services.task.feat3": "Complete documents",
+    "home.services.task.title": "Technology & IT Consulting",
+    "home.services.task.desc": "Strategic consulting for your business digital transformation, from system architecture to technology selection.",
+    "home.services.task.feat1": "System & technology audit",
+    "home.services.task.feat2": "Digital transformation strategy",
+    "home.services.task.feat3": "Development roadmap",
     "home.services.opt.title": "Website Optimization",
     "home.services.opt.desc": "Improving your website performance for faster loading and SEO friendliness.",
     "home.services.opt.feat1": "Speed optimization",
@@ -334,8 +361,8 @@ const translations = {
     "home.why.subtitle": "Advantages that make Ondisia the best choice for your website needs",
     "home.why.item1.title": "Fast, Neat, and Professional",
     "home.why.item1.desc": "On-time delivery with neat and professional results according to industry standards.",
-    "home.why.item2.title": "Perfect for School/College Tasks",
-    "home.why.item2.desc": "Experience in helping with various website tasks from school to university levels.",
+    "home.why.item2.title": "Goal-Oriented Solutions",
+    "home.why.item2.desc": "Experience helping various businesses find the right and efficient technology solutions.",
     "home.why.item3.title": "Free Consultation",
     "home.why.item3.desc": "Free consultation to help determine the best solution for your needs.",
     "home.why.item4.title": "Price Transparency",
@@ -505,6 +532,33 @@ const translations = {
     "detail.client": "Client",
     "detail.duration": "Duration",
 
+    // Testimonials
+    "testimonials.title": "What Our Clients Say",
+    "testimonials.subtitle": "Client satisfaction is our top priority",
+    "testimonials.1.name": "Rizky Firmansyah",
+    "testimonials.1.role": "Founder, StartFlow",
+    "testimonials.1.text": "Ondisia truly changed our perspective on digital. The website they built is very professional and delivered quickly. Highly recommended!",
+    "testimonials.2.name": "Siti Rahmawati",
+    "testimonials.2.role": "Owner, UMKM Batik Nusantara",
+    "testimonials.2.text": "I was hesitant at first, but the result exceeded expectations. The Ondisia team is very responsive and patiently explains every step.",
+    "testimonials.3.name": "Andi Prasetyo",
+    "testimonials.3.role": "CTO, EduTech Solusindo",
+    "testimonials.3.text": "The IT consulting from Ondisia helped us choose the right technology stack. Our system is now far more scalable.",
+
+    // FAQ
+    "faq.title": "Frequently Asked Questions",
+    "faq.subtitle": "Find answers to common questions about our services",
+    "faq.q1": "How long does website development take?",
+    "faq.a1": "It depends on project complexity. Landing pages usually take 3–7 days, company profile websites 1–2 weeks, and web/mobile apps 1–3 months.",
+    "faq.q2": "Is there a warranty after the project is complete?",
+    "faq.a2": "Yes, we provide 1 month of free maintenance after project completion for bug fixes and minor changes.",
+    "faq.q3": "What technologies do you use?",
+    "faq.a3": "We use modern technologies like React, Next.js, React Native, Node.js, and various cloud platforms based on project needs.",
+    "faq.q4": "How does the payment system work?",
+    "faq.a4": "Payment is 50% upfront as a deposit and 50% upon project completion and client approval.",
+    "faq.q5": "Can I request revisions?",
+    "faq.a5": "Absolutely. We provide 3 free revisions during the development process. Additional revisions can be discussed.",
+
     // Footer
     "footer.nav": "Navigation",
     "footer.services": "Services",
@@ -521,7 +575,14 @@ const translations = {
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>("id");
+  const [language, setLanguageState] = useState<Language>(() => {
+    return (localStorage.getItem("ondisia-lang") as Language) || "id";
+  });
+
+  const setLanguage = (lang: Language) => {
+    localStorage.setItem("ondisia-lang", lang);
+    setLanguageState(lang);
+  };
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations.id] || key;

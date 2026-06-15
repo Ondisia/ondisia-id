@@ -1,11 +1,9 @@
 import { MessageCircle, Send } from "lucide-react";
+import { CONTACT, waUrl, WA_GENERAL_MSG } from "@/lib/contact";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "6285178962397";
-  const telegramUsername = "bLack_Domon";
-  const message = "Halo Ondisia, saya tertarik untuk konsultasi mengenai pembuatan website/aplikasi.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  const telegramUrl = `https://t.me/${telegramUsername}`;
+  const whatsappUrl = waUrl(WA_GENERAL_MSG);
+  const telegramUrl = `https://t.me/${CONTACT.telegram}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 group">
@@ -15,6 +13,7 @@ const WhatsAppButton = () => {
           href={telegramUrl}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Chat via Telegram"
           className="flex items-center justify-center gap-3 bg-[#0088cc] hover:bg-[#0099e6] text-white px-5 py-3 rounded-full shadow-lg transition-all hover:scale-105"
         >
           <Send className="h-5 w-5" />
@@ -24,6 +23,7 @@ const WhatsAppButton = () => {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Chat via WhatsApp"
           className="flex items-center justify-center gap-3 bg-[#25d366] hover:bg-[#2ae06d] text-white px-5 py-3 rounded-full shadow-lg transition-all hover:scale-105"
         >
           <MessageCircle className="h-5 w-5" />
@@ -33,6 +33,7 @@ const WhatsAppButton = () => {
 
       {/* Main Button */}
       <button
+        aria-label="Buka opsi chat"
         className="bg-[#e7e7e7] hover:bg-[#ffffff] text-black rounded-full px-6 py-4 shadow-glow hover:scale-105 transition-all duration-300 flex items-center gap-2 group-hover:shadow-elegant relative z-10"
       >
         <MessageCircle className="h-6 w-6" />

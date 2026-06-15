@@ -10,6 +10,7 @@ const LanguageToggle = () => {
       variant="ghost"
       size="sm"
       onClick={() => setLanguage(language === "id" ? "en" : "id")}
+      aria-label={language === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"}
       className="gap-2"
     >
       <Globe className="h-4 w-4" />

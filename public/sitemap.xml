@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://ondisia.com/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Jasa Pembuatan Website -->
   <url>
-    <loc>https://ondisia.com/jasa-pembuatan-website</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Jasa Pembuatan Aplikasi Android -->
-  <url>
-    <loc>https://ondisia.com/jasa-aplikasi-android</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Kursus Web Development -->
-  <url>
-    <loc>https://ondisia.com/kursus-web-development</loc>
+    <loc>https://ondisia.com/about</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Kursus Android Development -->
   <url>
-    <loc>https://ondisia.com/kursus-android-development</loc>
+    <loc>https://ondisia.com/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ondisia.com/portfolio</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Kontak -->
   <url>
-    <loc>https://ondisia.com/kontak</loc>
+    <loc>https://ondisia.com/contact</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 

@@ -309,6 +309,7 @@ const PortfolioDetail = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className={`w-full h-[400px] ${project.category === "Web Development" ? "object-cover" : "object-contain object-bottom"}`}
                 />
               </motion.div>
@@ -438,6 +439,7 @@ const PortfolioDetail = () => {
                               <motion.img
                                 src={relatedProject.image}
                                 alt={relatedProject.title}
+                                loading="lazy"
                                 className={`w-full h-full ${relatedProject.category === "Web Development" ? "object-cover" : "object-contain object-bottom"}`}
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.5 }}

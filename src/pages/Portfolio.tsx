@@ -235,6 +235,7 @@ const Portfolio = () => {
                           <motion.img
                             src={project.image}
                             alt={project.title}
+                            loading="lazy"
                             className={`w-full h-full ${project.category === "Web Development" ? "object-cover" : "object-contain object-bottom"}`}
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.5 }}

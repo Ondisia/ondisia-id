@@ -271,7 +271,7 @@ const PortfolioDetail = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">{t("detail.notFound")}</h1>
           <Button asChild>
-            <Link to="/portfolio">{t("detail.backToPortfolio")}</Link>
+            <Link to="/products">{t("detail.backToPortfolio")}</Link>
           </Button>
         </div>
       </div>
@@ -292,7 +292,7 @@ const PortfolioDetail = () => {
         <div className="container mx-auto">
           <FadeIn>
             <Button variant="ghost" asChild className="mb-6">
-              <Link to="/portfolio">
+              <Link to="/products">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 {t("detail.backToPortfolio")}
               </Link>
@@ -429,7 +429,7 @@ const PortfolioDetail = () => {
                   <div className="grid gap-6">
                   {relatedProjects.map((relatedProject, index) => (
                     <ScaleIn key={relatedProject.id} delay={index * 0.1}>
-                      <Link to={`/portfolio/${relatedProject.id}`}>
+                      <Link to={`/products/${relatedProject.id}`}>
                         <motion.div
                           whileHover={{ y: -5 }}
                           transition={{ duration: 0.3 }}
@@ -482,7 +482,7 @@ const PortfolioDetail = () => {
                   
                   <div className="mt-6">
                     <Button variant="outline" className="w-full" asChild>
-                      <Link to="/portfolio">{t("detail.viewMore")}</Link>
+                      <Link to="/products">{t("detail.viewMore")}</Link>
                     </Button>
                   </div>
                 </div>

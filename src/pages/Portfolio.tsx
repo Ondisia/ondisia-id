@@ -224,7 +224,7 @@ const Portfolio = () => {
             ) : (
               paginatedProjects.map((project, index) => (
                 <ScaleIn key={project.id} delay={index * 0.1}>
-                  <Link to={`/portfolio/${project.id}`}>
+                  <Link to={`/products/${project.id}`}>
                     <motion.div
                       whileHover={{ y: -10 }}
                       transition={{ duration: 0.3 }}

@@ -16,7 +16,7 @@ const translations = {
     "nav.home": "Beranda",
     "nav.about": "Tentang",
     "nav.services": "Layanan",
-    "nav.portfolio": "Portfolio",
+    "nav.portfolio": "Produk",
     "nav.contact": "Kontak",
     "nav.apps": "Produk Kami",
     "nav.cta": "Konsultasi Gratis",
@@ -71,9 +71,9 @@ const translations = {
     "home.services.dev.feat2": "Responsive design",
     "home.services.dev.feat3": "Maintenance support",
     "home.services.course.title": "Kursus Website",
-    "home.services.course.desc": "Belajar membuat website dari dasar dengan HTML, CSS, dan JavaScript.",
-    "home.services.course.feat1": "Materi lengkap",
-    "home.services.course.feat2": "Praktik langsung",
+    "home.services.course.desc": "Belajar membuat website dari dasar hingga mahir, mencakup fondasi web hingga framework modern.",
+    "home.services.course.feat1": "Dasar hingga framework",
+    "home.services.course.feat2": "Praktik proyek nyata",
     "home.services.course.feat3": "Sertifikat",
 
     "home.why.title": "Mengapa Memilih Kami",
@@ -90,6 +90,23 @@ const translations = {
     "home.why.item5.desc": "Materi kursus dirancang khusus untuk pemula dengan pendekatan yang mudah dipahami.",
     "home.why.item6.title": "Waktu Fleksibel",
     "home.why.item6.desc": "Jadwal yang fleksibel untuk kursus dan pengerjaan proyek sesuai waktu Anda.",
+
+    // Home CTA
+    "home.cta.title": "Siap Memulai Proyek Digital Anda?",
+    "home.cta.subtitle": "Konsultasikan kebutuhan website, aplikasi, atau kursus Anda bersama tim profesional kami.",
+    "home.cta.button": "Hubungi Kami Sekarang",
+
+    // Home Stats
+    "home.stats.projects": "Project Selesai",
+    "home.stats.clients": "Klien Puas",
+    "home.stats.experience": "Tahun Pengalaman",
+    "home.stats.support": "Support",
+
+    // Apps
+    "apps.visit": "Kunjungi",
+
+    // Footer
+    "footer.desc": "Penyedia jasa digital terpercaya yang berfokus pada pembuatan website, aplikasi, dan kursus coding untuk bisnis Indonesia.",
     
     // About Page
     "about.title": "Tentang Ondisia",
@@ -205,13 +222,13 @@ const translations = {
     "contact.form.success": "Mengarahkan ke WhatsApp...",
     
     // Portfolio Page
-    "portfolio.title": "Portfolio Kami",
-    "portfolio.subtitle": "Lihat berbagai project yang telah kami selesaikan dengan hasil yang membanggakan",
+    "portfolio.title": "Produk Kami",
+    "portfolio.subtitle": "Lihat berbagai produk digital dan project yang telah kami kembangkan",
     "portfolio.filter.all": "Semua",
     "portfolio.filter.web": "Web Development",
     "portfolio.filter.mobile": "Mobile App",
-    "portfolio.cta.title": "Tertarik dengan Project Kami?",
-    "portfolio.cta.subtitle": "Mari diskusikan bagaimana kami bisa membantu mewujudkan project Anda",
+    "portfolio.cta.title": "Tertarik dengan Produk Kami?",
+    "portfolio.cta.subtitle": "Mari diskusikan bagaimana kami bisa membantu mewujudkan produk digital Anda",
     
     "portfolio.project1.title": "StartFlow",
     "portfolio.project1.desc": "Platform akselerator startup untuk membantu pengembangan bisnis lebih cepat dan efisien.",
@@ -243,12 +260,12 @@ const translations = {
     "detail.features": "Fitur Utama",
     "detail.challenges": "Tantangan",
     "detail.results": "Hasil",
-    "detail.related": "Portfolio Sejenis",
-    "detail.viewMore": "Lihat Portfolio Lainnya",
-    "detail.backToPortfolio": "Kembali ke Portfolio",
-    "detail.cta.title": "Tertarik dengan Project Serupa?",
-    "detail.cta.subtitle": "Mari diskusikan kebutuhan project Anda dengan tim kami",
-    "detail.notFound": "Project tidak ditemukan",
+    "detail.related": "Produk Sejenis",
+    "detail.viewMore": "Lihat Produk Lainnya",
+    "detail.backToPortfolio": "Kembali ke Produk",
+    "detail.cta.title": "Tertarik dengan Produk Serupa?",
+    "detail.cta.subtitle": "Mari diskusikan kebutuhan produk digital Anda dengan tim kami",
+    "detail.notFound": "Produk tidak ditemukan",
     "detail.client": "Klien",
     "detail.duration": "Durasi",
     
@@ -297,7 +314,7 @@ const translations = {
     "nav.home": "Home",
     "nav.about": "About",
     "nav.services": "Services",
-    "nav.portfolio": "Portfolio",
+    "nav.portfolio": "Products",
     "nav.contact": "Contact",
     "nav.apps": "Our Apps",
     "nav.cta": "Free Consultation",
@@ -352,9 +369,9 @@ const translations = {
     "home.services.dev.feat2": "Responsive design",
     "home.services.dev.feat3": "Maintenance support",
     "home.services.course.title": "Website Courses",
-    "home.services.course.desc": "Learn to build websites from scratch with HTML, CSS, and JavaScript.",
-    "home.services.course.feat1": "Complete material",
-    "home.services.course.feat2": "Hands-on practice",
+    "home.services.course.desc": "Learn web development from basics to advanced, covering web fundamentals to modern frameworks.",
+    "home.services.course.feat1": "Basics to frameworks",
+    "home.services.course.feat2": "Real project practice",
     "home.services.course.feat3": "Certificate",
 
     "home.why.title": "Why Choose Us",
@@ -371,6 +388,23 @@ const translations = {
     "home.why.item5.desc": "Course material specifically designed for beginners with an easy-to-understand approach.",
     "home.why.item6.title": "Flexible Time",
     "home.why.item6.desc": "Flexible schedules for courses and project execution according to your time.",
+
+    // Home CTA
+    "home.cta.title": "Ready to Start Your Digital Project?",
+    "home.cta.subtitle": "Consult your website, application, or course needs with our professional team.",
+    "home.cta.button": "Contact Us Now",
+
+    // Home Stats
+    "home.stats.projects": "Completed Projects",
+    "home.stats.clients": "Happy Clients",
+    "home.stats.experience": "Years Experience",
+    "home.stats.support": "Support",
+
+    // Apps
+    "apps.visit": "Visit",
+
+    // Footer
+    "footer.desc": "A trusted digital service provider focusing on website development, applications, and coding courses for Indonesian businesses.",
     
     // About Page
     "about.title": "About Ondisia",
@@ -485,13 +519,13 @@ const translations = {
     "contact.form.success": "Redirecting to WhatsApp...",
     
     // Portfolio Page
-    "portfolio.title": "Our Portfolio",
-    "portfolio.subtitle": "Explore our completed projects with outstanding results",
+    "portfolio.title": "Our Products",
+    "portfolio.subtitle": "Explore our digital products and projects with outstanding results",
     "portfolio.filter.all": "All",
     "portfolio.filter.web": "Web Development",
     "portfolio.filter.mobile": "Mobile App",
-    "portfolio.cta.title": "Interested in Our Projects?",
-    "portfolio.cta.subtitle": "Let's discuss how we can help bring your project to life",
+    "portfolio.cta.title": "Interested in Our Products?",
+    "portfolio.cta.subtitle": "Let's discuss how we can help bring your digital product to life",
     
     "portfolio.project1.title": "StartFlow",
     "portfolio.project1.desc": "Startup accelerator platform to help businesses grow faster and more efficiently.",
@@ -523,12 +557,12 @@ const translations = {
     "detail.features": "Key Features",
     "detail.challenges": "Challenges",
     "detail.results": "Results",
-    "detail.related": "Related Projects",
-    "detail.viewMore": "View All Portfolio",
-    "detail.backToPortfolio": "Back to Portfolio",
-    "detail.cta.title": "Interested in Similar Projects?",
+    "detail.related": "Related Products",
+    "detail.viewMore": "View All Products",
+    "detail.backToPortfolio": "Back to Products",
+    "detail.cta.title": "Interested in Similar Products?",
     "detail.cta.subtitle": "Let's discuss your project needs with our team",
-    "detail.notFound": "Project not found",
+    "detail.notFound": "Product not found",
     "detail.client": "Client",
     "detail.duration": "Duration",
 

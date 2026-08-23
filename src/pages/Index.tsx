@@ -138,7 +138,7 @@ const Index = () => {
                       className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 text-center transition-colors"
                     >
                       <Globe className="h-10 w-10 mx-auto mb-3 text-purple-400" />
-                      <p className="font-medium text-sm md:text-base">Scaleable</p>
+                      <p className="font-medium text-sm md:text-base">Scalable</p>
                     </motion.div>
                     <motion.div 
                       whileHover={{ y: -5 }}
@@ -244,7 +244,7 @@ const Index = () => {
                     {app.link !== "#" && (
                       <Button variant="outline" className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors" asChild>
                         <a href={app.link} target="_blank" rel="noopener noreferrer">
-                          Kunjungi {app.title} <ChevronRight className="ml-2 h-4 w-4" />
+                          {t("apps.visit")} {app.title} <ChevronRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
                     )}
@@ -307,6 +307,53 @@ const Index = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-2"
+            >
+              <h3 className="text-4xl md:text-5xl font-bold">150+</h3>
+              <p className="text-primary-foreground/80 font-medium">{t("home.stats.projects")}</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="space-y-2"
+            >
+              <h3 className="text-4xl md:text-5xl font-bold">120+</h3>
+              <p className="text-primary-foreground/80 font-medium">{t("home.stats.clients")}</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="space-y-2"
+            >
+              <h3 className="text-4xl md:text-5xl font-bold">5+</h3>
+              <p className="text-primary-foreground/80 font-medium">{t("home.stats.experience")}</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="space-y-2"
+            >
+              <h3 className="text-4xl md:text-5xl font-bold">24/7</h3>
+              <p className="text-primary-foreground/80 font-medium">{t("home.stats.support")}</p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -525,6 +572,47 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-card relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background"></div>
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
+          >
+            {t("home.cta.title")}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+          >
+            {t("home.cta.subtitle")}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-full font-semibold shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:scale-105" asChild>
+              <a 
+                href={waUrl(WA_DEFAULT_MSG)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("home.cta.button")}
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+          </motion.div>
         </div>
       </section>
 

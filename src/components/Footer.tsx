@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Github, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
@@ -8,7 +8,26 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-12 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          
+          {/* Company Info */}
+          <div className="col-span-1 md:col-span-1">
+            <h3 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Ondisia</h3>
+            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              {t("footer.desc")}
+            </p>
+            <div className="flex gap-4">
+              <a href="https://instagram.com/ondisia.id" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://github.com/ondisia" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                <Github className="h-5 w-5" />
+              </a>
+              <a href="https://linkedin.com/company/ondisia" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
 
           {/* Quick Links */}
           <div>
@@ -25,7 +44,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/products" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   {t("nav.portfolio")}
                 </Link>
               </li>
